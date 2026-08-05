@@ -1,0 +1,565 @@
+{
+  "status": "held-out final-policy topology sweep; no confirmation tuning",
+  "run_count": 180,
+  "cell_count": 9,
+  "confirmation_seeds": [
+    2000000181,
+    2000000193,
+    2000000207,
+    2000000227
+  ],
+  "policy_means": {
+    "1p3d:interactive": {
+      "causal_externality_no_capacity_v8": 0.9825,
+      "least_ttft_joint": 0.9741666666666666,
+      "llmd_prefix_threshold_workload_tuned": 0.8983333333333333,
+      "static_joint_yardstick": 0.9858333333333333,
+      "capacity_static": 0.9758333333333333
+    },
+    "1p3d:reasoning": {
+      "causal_externality_no_capacity_v8": 1.0,
+      "least_ttft_joint": 1.0,
+      "llmd_prefix_threshold_workload_tuned": 1.0,
+      "static_joint_yardstick": 1.0,
+      "capacity_static": 1.0
+    },
+    "1p3d:deep_research": {
+      "causal_externality_no_capacity_v8": 0.875,
+      "least_ttft_joint": 0.846875,
+      "llmd_prefix_threshold_workload_tuned": 0.7890625,
+      "static_joint_yardstick": 0.86875,
+      "capacity_static": 0.85625
+    },
+    "2p2d:interactive": {
+      "causal_externality_no_capacity_v8": 0.9608333333333333,
+      "least_ttft_joint": 0.9008333333333334,
+      "llmd_prefix_threshold_workload_tuned": 0.9541666666666666,
+      "static_joint_yardstick": 0.9633333333333334,
+      "capacity_static": 0.9191666666666667
+    },
+    "2p2d:reasoning": {
+      "causal_externality_no_capacity_v8": 1.0,
+      "least_ttft_joint": 1.0,
+      "llmd_prefix_threshold_workload_tuned": 0.9984375,
+      "static_joint_yardstick": 1.0,
+      "capacity_static": 1.0
+    },
+    "2p2d:deep_research": {
+      "causal_externality_no_capacity_v8": 0.8375,
+      "least_ttft_joint": 0.8125,
+      "llmd_prefix_threshold_workload_tuned": 0.8296875,
+      "static_joint_yardstick": 0.8484375,
+      "capacity_static": 0.8484375
+    },
+    "3p1d:interactive": {
+      "causal_externality_no_capacity_v8": 0.7716666666666667,
+      "least_ttft_joint": 0.7016666666666667,
+      "llmd_prefix_threshold_workload_tuned": 0.7816666666666667,
+      "static_joint_yardstick": 0.7825,
+      "capacity_static": 0.6733333333333333
+    },
+    "3p1d:reasoning": {
+      "causal_externality_no_capacity_v8": 0.9921875,
+      "least_ttft_joint": 0.9921875,
+      "llmd_prefix_threshold_workload_tuned": 0.9921875,
+      "static_joint_yardstick": 0.9921875,
+      "capacity_static": 0.9921875
+    },
+    "3p1d:deep_research": {
+      "causal_externality_no_capacity_v8": 0.8375,
+      "least_ttft_joint": 0.815625,
+      "llmd_prefix_threshold_workload_tuned": 0.846875,
+      "static_joint_yardstick": 0.8484375,
+      "capacity_static": 0.696875
+    }
+  },
+  "remote_means": {
+    "1p3d:interactive": {
+      "causal_externality_no_capacity_v8": 0.38166666666666665,
+      "least_ttft_joint": 0.06916666666666667,
+      "llmd_prefix_threshold_workload_tuned": 0.9833333333333334,
+      "static_joint_yardstick": 0.75,
+      "capacity_static": 0.25
+    },
+    "1p3d:reasoning": {
+      "causal_externality_no_capacity_v8": 0.0015625,
+      "least_ttft_joint": 0.0,
+      "llmd_prefix_threshold_workload_tuned": 1.0,
+      "static_joint_yardstick": 0.0,
+      "capacity_static": 0.25
+    },
+    "1p3d:deep_research": {
+      "causal_externality_no_capacity_v8": 0.4015625,
+      "least_ttft_joint": 0.1609375,
+      "llmd_prefix_threshold_workload_tuned": 1.0,
+      "static_joint_yardstick": 0.75,
+      "capacity_static": 0.5
+    },
+    "2p2d:interactive": {
+      "causal_externality_no_capacity_v8": 0.7033333333333334,
+      "least_ttft_joint": 0.2758333333333333,
+      "llmd_prefix_threshold_workload_tuned": 0.9833333333333334,
+      "static_joint_yardstick": 1.0,
+      "capacity_static": 0.5
+    },
+    "2p2d:reasoning": {
+      "causal_externality_no_capacity_v8": 0.0140625,
+      "least_ttft_joint": 0.0015625,
+      "llmd_prefix_threshold_workload_tuned": 1.0,
+      "static_joint_yardstick": 0.0,
+      "capacity_static": 1.0
+    },
+    "2p2d:deep_research": {
+      "causal_externality_no_capacity_v8": 0.7171875,
+      "least_ttft_joint": 0.478125,
+      "llmd_prefix_threshold_workload_tuned": 1.0,
+      "static_joint_yardstick": 1.0,
+      "capacity_static": 1.0
+    },
+    "3p1d:interactive": {
+      "causal_externality_no_capacity_v8": 0.8883333333333333,
+      "least_ttft_joint": 0.6525,
+      "llmd_prefix_threshold_workload_tuned": 0.9833333333333334,
+      "static_joint_yardstick": 1.0,
+      "capacity_static": 0.75
+    },
+    "3p1d:reasoning": {
+      "causal_externality_no_capacity_v8": 0.1640625,
+      "least_ttft_joint": 0.14218750000000002,
+      "llmd_prefix_threshold_workload_tuned": 1.0,
+      "static_joint_yardstick": 0.0,
+      "capacity_static": 1.0
+    },
+    "3p1d:deep_research": {
+      "causal_externality_no_capacity_v8": 0.8546875,
+      "least_ttft_joint": 0.6609375,
+      "llmd_prefix_threshold_workload_tuned": 1.0,
+      "static_joint_yardstick": 1.0,
+      "capacity_static": 0.0
+    }
+  },
+  "per_seed_goodput": {
+    "1p3d:interactive": {
+      "causal_externality_no_capacity_v8": [
+        0.9966666666666667,
+        0.9866666666666667,
+        0.98,
+        0.9666666666666667
+      ],
+      "least_ttft_joint": [
+        0.9966666666666667,
+        0.98,
+        0.9633333333333334,
+        0.9566666666666667
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        0.8266666666666667,
+        0.99,
+        0.8766666666666667,
+        0.9
+      ],
+      "static_joint_yardstick": [
+        0.9966666666666667,
+        0.99,
+        0.99,
+        0.9666666666666667
+      ],
+      "capacity_static": [
+        0.9966666666666667,
+        0.9833333333333333,
+        0.9666666666666667,
+        0.9566666666666667
+      ]
+    },
+    "1p3d:reasoning": {
+      "causal_externality_no_capacity_v8": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "least_ttft_joint": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "static_joint_yardstick": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "capacity_static": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "1p3d:deep_research": {
+      "causal_externality_no_capacity_v8": [
+        0.90625,
+        0.875,
+        0.8375,
+        0.88125
+      ],
+      "least_ttft_joint": [
+        0.88125,
+        0.85625,
+        0.8125,
+        0.8375
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        0.93125,
+        0.775,
+        0.625,
+        0.825
+      ],
+      "static_joint_yardstick": [
+        0.89375,
+        0.9,
+        0.83125,
+        0.85
+      ],
+      "capacity_static": [
+        0.8625,
+        0.88125,
+        0.83125,
+        0.85
+      ]
+    },
+    "2p2d:interactive": {
+      "causal_externality_no_capacity_v8": [
+        0.9833333333333333,
+        0.9733333333333334,
+        0.95,
+        0.9366666666666666
+      ],
+      "least_ttft_joint": [
+        0.9166666666666666,
+        0.94,
+        0.8566666666666667,
+        0.89
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        0.96,
+        0.9766666666666667,
+        0.95,
+        0.93
+      ],
+      "static_joint_yardstick": [
+        0.9866666666666667,
+        0.9766666666666667,
+        0.9533333333333334,
+        0.9366666666666666
+      ],
+      "capacity_static": [
+        0.94,
+        0.9533333333333334,
+        0.8766666666666667,
+        0.9066666666666666
+      ]
+    },
+    "2p2d:reasoning": {
+      "causal_externality_no_capacity_v8": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "least_ttft_joint": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        1.0,
+        0.99375,
+        1.0,
+        1.0
+      ],
+      "static_joint_yardstick": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "capacity_static": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "2p2d:deep_research": {
+      "causal_externality_no_capacity_v8": [
+        0.875,
+        0.85,
+        0.7875,
+        0.8375
+      ],
+      "least_ttft_joint": [
+        0.85,
+        0.8125,
+        0.76875,
+        0.81875
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        0.8625,
+        0.85,
+        0.7625,
+        0.84375
+      ],
+      "static_joint_yardstick": [
+        0.9,
+        0.83125,
+        0.8125,
+        0.85
+      ],
+      "capacity_static": [
+        0.9,
+        0.83125,
+        0.8125,
+        0.85
+      ]
+    },
+    "3p1d:interactive": {
+      "causal_externality_no_capacity_v8": [
+        0.77,
+        0.8466666666666667,
+        0.73,
+        0.74
+      ],
+      "least_ttft_joint": [
+        0.7166666666666667,
+        0.7633333333333333,
+        0.6466666666666666,
+        0.68
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        0.7833333333333333,
+        0.8566666666666667,
+        0.74,
+        0.7466666666666667
+      ],
+      "static_joint_yardstick": [
+        0.7833333333333333,
+        0.86,
+        0.74,
+        0.7466666666666667
+      ],
+      "capacity_static": [
+        0.7233333333333334,
+        0.7666666666666667,
+        0.5666666666666667,
+        0.6366666666666667
+      ]
+    },
+    "3p1d:reasoning": {
+      "causal_externality_no_capacity_v8": [
+        1.0,
+        0.9875,
+        0.9875,
+        0.99375
+      ],
+      "least_ttft_joint": [
+        1.0,
+        0.9875,
+        0.9875,
+        0.99375
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        1.0,
+        0.9875,
+        0.9875,
+        0.99375
+      ],
+      "static_joint_yardstick": [
+        1.0,
+        0.9875,
+        0.9875,
+        0.99375
+      ],
+      "capacity_static": [
+        1.0,
+        0.9875,
+        0.9875,
+        0.99375
+      ]
+    },
+    "3p1d:deep_research": {
+      "causal_externality_no_capacity_v8": [
+        0.88125,
+        0.8375,
+        0.79375,
+        0.8375
+      ],
+      "least_ttft_joint": [
+        0.8625,
+        0.80625,
+        0.78125,
+        0.8125
+      ],
+      "llmd_prefix_threshold_workload_tuned": [
+        0.9,
+        0.85,
+        0.8,
+        0.8375
+      ],
+      "static_joint_yardstick": [
+        0.9,
+        0.85,
+        0.8,
+        0.84375
+      ],
+      "capacity_static": [
+        0.79375,
+        0.7125,
+        0.55,
+        0.73125
+      ]
+    }
+  },
+  "deployable_minimax_ranking": [
+    {
+      "policy": "causal_externality_no_capacity_v8",
+      "worst_regret": 0.010000000000000009,
+      "worst_cell": "3p1d:interactive",
+      "mean_goodput": 0.9174652777777779,
+      "regret_by_cell": {
+        "1p3d:interactive": 0.0,
+        "1p3d:reasoning": 0.0,
+        "1p3d:deep_research": 0.0,
+        "2p2d:interactive": 0.0,
+        "2p2d:reasoning": 0.0,
+        "2p2d:deep_research": 0.0,
+        "3p1d:interactive": 0.010000000000000009,
+        "3p1d:reasoning": 0.0,
+        "3p1d:deep_research": 0.009375000000000022
+      }
+    },
+    {
+      "policy": "least_ttft_joint",
+      "worst_regret": 0.08000000000000007,
+      "worst_cell": "3p1d:interactive",
+      "mean_goodput": 0.893761574074074,
+      "regret_by_cell": {
+        "1p3d:interactive": 0.008333333333333415,
+        "1p3d:reasoning": 0.0,
+        "1p3d:deep_research": 0.028124999999999956,
+        "2p2d:interactive": 0.05999999999999994,
+        "2p2d:reasoning": 0.0,
+        "2p2d:deep_research": 0.025000000000000022,
+        "3p1d:interactive": 0.08000000000000007,
+        "3p1d:reasoning": 0.0,
+        "3p1d:deep_research": 0.03125
+      }
+    },
+    {
+      "policy": "llmd_prefix_threshold_workload_tuned",
+      "worst_regret": 0.0859375,
+      "worst_cell": "1p3d:deep_research",
+      "mean_goodput": 0.8989351851851851,
+      "regret_by_cell": {
+        "1p3d:interactive": 0.08416666666666672,
+        "1p3d:reasoning": 0.0,
+        "1p3d:deep_research": 0.0859375,
+        "2p2d:interactive": 0.00666666666666671,
+        "2p2d:reasoning": 0.0015625000000000222,
+        "2p2d:deep_research": 0.0078125,
+        "3p1d:interactive": 0.0,
+        "3p1d:reasoning": 0.0,
+        "3p1d:deep_research": 0.0
+      }
+    }
+  ],
+  "deployable_ranking_by_topology": {
+    "1p3d": [
+      {
+        "policy": "causal_externality_no_capacity_v8",
+        "worst_regret": 0.0,
+        "worst_cell": "1p3d:interactive"
+      },
+      {
+        "policy": "least_ttft_joint",
+        "worst_regret": 0.028124999999999956,
+        "worst_cell": "1p3d:deep_research"
+      },
+      {
+        "policy": "llmd_prefix_threshold_workload_tuned",
+        "worst_regret": 0.0859375,
+        "worst_cell": "1p3d:deep_research"
+      }
+    ],
+    "2p2d": [
+      {
+        "policy": "causal_externality_no_capacity_v8",
+        "worst_regret": 0.0,
+        "worst_cell": "2p2d:interactive"
+      },
+      {
+        "policy": "llmd_prefix_threshold_workload_tuned",
+        "worst_regret": 0.0078125,
+        "worst_cell": "2p2d:deep_research"
+      },
+      {
+        "policy": "least_ttft_joint",
+        "worst_regret": 0.05999999999999994,
+        "worst_cell": "2p2d:interactive"
+      }
+    ],
+    "3p1d": [
+      {
+        "policy": "llmd_prefix_threshold_workload_tuned",
+        "worst_regret": 0.0,
+        "worst_cell": "3p1d:interactive"
+      },
+      {
+        "policy": "causal_externality_no_capacity_v8",
+        "worst_regret": 0.010000000000000009,
+        "worst_cell": "3p1d:interactive"
+      },
+      {
+        "policy": "least_ttft_joint",
+        "worst_regret": 0.08000000000000007,
+        "worst_cell": "3p1d:interactive"
+      }
+    ]
+  },
+  "focal_paired_deltas": {
+    "least_ttft_joint": {
+      "mean_delta": 0.023703703703703703,
+      "ci_low": 0.014915353042810596,
+      "ci_high": 0.03249205436459681
+    },
+    "llmd_prefix_threshold_workload_tuned": {
+      "mean_delta": 0.018530092592592588,
+      "ci_low": 0.0016870844875944077,
+      "ci_high": 0.03537310069759077
+    },
+    "static_joint_yardstick": {
+      "mean_delta": -0.0035879629629629716,
+      "ci_low": -0.0072178599438574315,
+      "ci_high": 4.193401793148831e-05
+    },
+    "capacity_static": {
+      "mean_delta": 0.03278935185185185,
+      "ci_low": 0.014082067251250007,
+      "ci_high": 0.051496636452453684
+    }
+  },
+  "hard_invalid_runs": 0,
+  "runs_with_drops": 0,
+  "runs_with_timeouts": 0,
+  "runs_with_length_caps": 0,
+  "focal_candidate_trace_runs": 36,
+  "chosen_argmin_trace_exact": true
+}

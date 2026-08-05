@@ -1,0 +1,43 @@
+# Independent-request translation of inference-perf/workload-catalog/reasoning.
+# Source inspected 2026-07-30:
+#   workload-catalog/reasoning/inference-perf.yaml
+#
+# This workload is already single-turn upstream.  The executable YAML specifies
+# lognormal output length, whereas config.json calls it exponential; this file
+# follows the executable YAML.  Ten prefix groups mirror num_conversations=10.
+
+version: "2"
+seed: 42
+category: language
+aggregate_rate: 1.0
+num_requests: 160
+
+cohorts:
+  - id: reasoning
+    population: 10
+    tenant_id: reasoning-jobs
+    slo_class: standard
+    rate_fraction: 1.0
+    streaming: true
+    arrival:
+      process: poisson
+    input_distribution:
+      type: lognormal
+      params:
+        # Catalog mean=1,000, std_dev=800, bounds=[100, 5,000].
+        mu: 6.660407
+        sigma: 0.703346
+        min: 100
+        max: 5000
+    output_distribution:
+      type: lognormal
+      params:
+        # Executable YAML mean=8,000, std_dev=6,500, bounds=[500, 32,000].
+        mu: 8.733741
+        sigma: 0.711977
+        min: 500
+        max: 32000
+    prefix_group: reasoning-system-prompt
+    prefix_sharing: per_member
+    prefix_length: 250
+

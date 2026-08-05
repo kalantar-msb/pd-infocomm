@@ -1,0 +1,44 @@
+# Independent-request translation of inference-perf/workload-catalog/interactive-chat.
+# Source inspected 2026-07-30:
+#   workload-catalog/interactive-chat/inference-perf.yaml
+#
+# The upstream executable YAML uses conversation_replay with 50 conversations,
+# a 1,000-token shared-system-prompt component, lognormal dynamic context, and
+# normal output length.  This closeout intentionally ignores turns, think time,
+# and context accumulation.  The 50 cohort members retain distinct prefix groups
+# so routing still sees the upstream conversation population's cache locality.
+
+version: "2"
+seed: 42
+category: language
+aggregate_rate: 8.0
+num_requests: 300
+
+cohorts:
+  - id: interactive-chat
+    population: 50
+    tenant_id: interactive-users
+    slo_class: standard
+    rate_fraction: 1.0
+    streaming: true
+    arrival:
+      process: poisson
+    input_distribution:
+      type: lognormal
+      params:
+        # Catalog mean=4,000, std_dev=2,500, bounds=[500, 15,000].
+        mu: 8.129173
+        sigma: 0.574241
+        min: 500
+        max: 15000
+    output_distribution:
+      type: gaussian
+      params:
+        mean: 300
+        std_dev: 150
+        min: 10
+        max: 1000
+    prefix_group: interactive-system-prompt
+    prefix_sharing: per_member
+    prefix_length: 1000
+

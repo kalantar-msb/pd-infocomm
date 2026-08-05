@@ -1,0 +1,50 @@
+# Independent-request translation of inference-perf/workload-catalog/deep-research.
+# Source inspected 2026-07-30:
+#   workload-catalog/deep-research/inference-perf.yaml
+#
+# The executable YAML uses a lognormal dynamic-system-prompt distribution and a
+# normal per-turn output distribution.  config.json instead describes aggregate
+# input as exponential and output as bimodal; this file follows the executable
+# YAML because that is what inference-perf runs.  Multi-turn accumulation and
+# tool-call think time are deliberately omitted for this bounded closeout.
+#
+# The upstream dynamic prompt maximum is 150,000 tokens, beyond the 128K context
+# of the evaluated Llama model.  It is capped at 121,000 so the 2,000-token fixed
+# prefix plus the 4,000-token maximum output remains below 128,000 tokens.  This
+# is a declared compatibility translation, not an unreported simulator drop.
+
+version: "2"
+seed: 42
+category: language
+aggregate_rate: 1.0
+num_requests: 160
+
+cohorts:
+  - id: deep-research
+    population: 5
+    tenant_id: research-agents
+    slo_class: standard
+    rate_fraction: 1.0
+    streaming: true
+    arrival:
+      process: poisson
+    input_distribution:
+      type: lognormal
+      params:
+        # Upstream mean=45,000, std_dev=35,000, min=2,000; max translated
+        # from 150,000 to 121,000 for the evaluated model's context window.
+        mu: 10.477875
+        sigma: 0.687812
+        min: 2000
+        max: 121000
+    output_distribution:
+      type: gaussian
+      params:
+        mean: 300
+        std_dev: 850
+        min: 50
+        max: 4000
+    prefix_group: deep-research-system-prompt
+    prefix_sharing: per_member
+    prefix_length: 2000
+

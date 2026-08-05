@@ -1,0 +1,5371 @@
+{
+  "status": "frozen before forced-action deviations",
+  "seed": 1073741827,
+  "sample_per_cell": 8,
+  "cells": {
+    "h100_homogeneous:interactive:low_0p60": [
+      {
+        "sample_index": 0,
+        "request_id": "request_78",
+        "hash": "02dd4ad848eef3a5fadd0759fc21339ebafd26df3b7b03c00c82a9a87c4eb8fb",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_150",
+        "hash": "03e36efaed38e0691952c83ae711b5bd4740d04e884ca561f411648d9712fb93",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_213",
+        "hash": "0c29728b5b44727aa1691745e3e51f51b0b3d3746c8b1de869d68738c8967d4c",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_196",
+        "hash": "0ecf3bc72a1c3cd15ddfc23191475814ac6329f5a687ab51dbb1c796219379bc",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_251",
+        "hash": "01c65452eb7af829b16e6fad738d8af215f6615615a8f4b832765a7418bf05cf",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_157",
+        "hash": "0288e018e3c6f28b79502ea9d35bda7c200257aca22c44ddcaa98883c00392c9",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_194",
+        "hash": "034ae8b4a6a208e117873135e90ee94070dec76cfbef150aa6c29ea782767b60",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_57",
+        "hash": "0bc99d991da8196add1bde6fa5913365396675999729064ce3f13fddc0371c75",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_homogeneous:interactive:medium_0p80": [
+      {
+        "sample_index": 0,
+        "request_id": "request_162",
+        "hash": "0b7ee361a8bf4dcc5a28ccbb448cbc418099b40ae5fdbd85137864261765ceb1",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_140",
+        "hash": "0f6759695e75837dae02501cab0c319dae9da732477ec60179ffa29d83c5801d",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_240",
+        "hash": "00b141be9da52830f9366805a25ffce12f8e4798034eb875faba44ad55988189",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_194",
+        "hash": "01b079df84921aeb7bf184d808c8bb17f7b23230ee7de0bd85aa603112d56c6d",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_90",
+        "hash": "01a73fd9f974140576b319bcf673071511315c6c03c3a807a08c87f5b52aacb9",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_253",
+        "hash": "0d27b196233554e397dedfb941a97d430f89c4003ffc32a1026582b26264e75e",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_14",
+        "hash": "0752cbf0a5b6bf844373edc2187d0f084471bd811e923821d41ee004caa28f81",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_20",
+        "hash": "09ca1cc6237edd266acd5113b3f3ca27bcd175247e58585dbef6939e5685c34f",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_homogeneous:interactive:high_0p95": [
+      {
+        "sample_index": 0,
+        "request_id": "request_288",
+        "hash": "02f6c75e02ba5bb82d8953fc1d9df73b103412f0c86546225b41d807866ba391",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_225",
+        "hash": "05545345cc417655dc22df34ed5649d1e0ee3ab62af39a5d92f56bd92f22b2fc",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_70",
+        "hash": "00e2e79d607db9e4dd1d869da43248a7566b2fe18ffc64563ab7787af55cc1f8",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_89",
+        "hash": "07b8cdb56980666c18ce304d0d453b9ba892e526d1a00a73f861eea54f27f2f9",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_111",
+        "hash": "02610cf17ed0e3b54d132b3aadc774213e6c996afcd6e57e5840618e824b1fed",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_42",
+        "hash": "026df82f782615db78018cebbd9fcbf859cd62917b765aaa060894ed55bfeda7",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_23",
+        "hash": "01da368c9d8cae599955329c84228b8a4b9e633eab75a2e27cbea73606507dcd",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_49",
+        "hash": "02ed700161dc8f207f0e2a5d2d24081f86d803a34abbe786ec5f696a242a3943",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_homogeneous:reasoning:low_0p60": [
+      {
+        "sample_index": 0,
+        "request_id": "request_129",
+        "hash": "555b0aed666ffc289f3844e8fd4096cdbc154cd5e2298e158fa9eab534fcd06f",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_1",
+        "hash": "011b51e41b4a8893be6bc0a5f0e6fe4c74fba29ae3d03e9a0d987ac34d5cd6cd",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_88",
+        "hash": "016fb6f2840df8c14d89c04de2fa312afa97fe64ecc3b0dee96ccb52528c6c41",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_97",
+        "hash": "004a324bbe3f4f046120a80fccfbeb43007be77f8c25fbbbc15c165f8b2b9d9b",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_11",
+        "hash": "081960213295ae9499c63b7b4e34137b99dd984eae4a8566139859c6c6da579c",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_18",
+        "hash": "0948beb7d18424d1b0a7572f23a1aa2ef76118a61f7f26c6178b8450e155fb79",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_134",
+        "hash": "09a8c9265e17d2807cbe741aff9b436afcb9c1b73c91465f72f86b6273e43bfa",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_51",
+        "hash": "0a837989db351ea3acfc10fe78303179a01e5904ed936aad00b2e0133c5257d1",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_homogeneous:reasoning:medium_0p80": [
+      {
+        "sample_index": 0,
+        "request_id": "request_152",
+        "hash": "19cb72e4594c174cd4600db5014518515aeb7c0e8a1295b625bcc31fb171cce1",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_130",
+        "hash": "9287d7df4c542c34834b52ace56929db5ebb448e821e9b7619ce5f6d116af0c2",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_16",
+        "hash": "0205a22744aa91f6527368abe777474c346e4ed46e8740dacdbd8724dce8dfcf",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_129",
+        "hash": "0872113518bac0181a14add42499c24f4f5805ba9bc17c6b3c4b1bda842fee84",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_146",
+        "hash": "14b85b29f4ceb39f9520c465cc7ba9323baf34e4438879f09c21281621ba8c4a",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_137",
+        "hash": "153bc8c6f84f21517c50d0a374b82a21644161c813ee8ea4e856f4aa25166b0c",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_37",
+        "hash": "049d3466d1c5b284201e78d38905d970fd77b53e2d21ef852fa4976f8d1c3d3e",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_115",
+        "hash": "0fb01e75cfd68c65acf85419c18afd9ef03ec11dd63fc2d2de136cf413943ed6",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_homogeneous:reasoning:high_0p95": [
+      {
+        "sample_index": 0,
+        "request_id": "request_140",
+        "hash": "414d79986b240927b4e08a5ed66c75ac3fce8b7e2ee5a8da678f1477311c47b5",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_144",
+        "hash": "ff79822f2d318eb0d5262cc4d218b927ed2183ad870273125ffac5eabd8172af",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_64",
+        "hash": "03cd747b5a21769188bde046865ca8dc98220633cc950a15789af23b85a8a429",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_3",
+        "hash": "06773d4b968031a97ee40045184066a8deb16c9fce57e76797cff7676174b9ae",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_151",
+        "hash": "0ab79552e2261d154390635ae886f7574017f57543e0fabff645cabf88595ab4",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_131",
+        "hash": "2202c61a24f30651851e5558f2e4431b678b3d020ef01bbbc41101ad2d4fdad3",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_134",
+        "hash": "04f7172a486107c17c27e7f5ea7c1a095fd18bf4e5f7f247c7835dc9b01253da",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_100",
+        "hash": "065e0aa44cfa985812c9173e40a252c47d842c5b7175feaab3b7e0c15c47d622",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_homogeneous:deep_research:low_0p60": [
+      {
+        "sample_index": 0,
+        "request_id": "request_39",
+        "hash": "0d253f8222280f8c8d3fbde6655aafe59116dc90d72e3bcb81215d2aa7f4b8c0",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_34",
+        "hash": "1e84f9c18245c57ed20901c24fb54e808a4e11438df576fe6a6d0fb68a044c8b",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_63",
+        "hash": "00ab049ee48f3870d2df0016545b0cee7680323fb12b5afd8edbb0f9cc67751d",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_33",
+        "hash": "00c7701174304d9d6d9680da825bbb44eadada159b4f0c408bdf0c03c4eadbe4",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_42",
+        "hash": "01ddfcb04dd4f6d853e950d989c42e22869d9f52c1c4dbd1c70db505c534fbdb",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_152",
+        "hash": "054f9b059d1b5b0e5d54009b3af3469c8367331a8d85508d9d4e34ce61e45cd7",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_68",
+        "hash": "020e385322f875823ef271ac191e6ee19aacfb9317d03252318c87b00978d656",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_48",
+        "hash": "0531319266b5d0950ebb5648e7067f72c404320ba7979fc54c76f03b0eed7d4b",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_homogeneous:deep_research:medium_0p80": [
+      {
+        "sample_index": 0,
+        "request_id": "request_39",
+        "hash": "0364d3c438667219fb920db0c01f58bc526040f18c9ed9af7abe85543b7cccd8",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_64",
+        "hash": "0d3980b59a3f24dd90ab23321b39b8a26672db5e8eac06c21752019c15eef76f",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_13",
+        "hash": "01c640b6574f88b6a91da0b0bd094c6834bf6291a4ea28d2b85c9a9329cf0929",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_18",
+        "hash": "04a99fb8fd4f9ad407c54a675279d1127aebd4139263c44f87b0ee35407684aa",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_142",
+        "hash": "042989271c939356c599799f13348aa349a799e7ddf9a3729ddde405e2a607d2",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_152",
+        "hash": "09b9bacbbcb3607c01028aaed2020f4f4ddf9b14dc95d9def321308dc2da59ce",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_78",
+        "hash": "16f9567c2ed706faaf28efa73d31c66991299e56363a7aa3dd54ad5afb154922",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_20",
+        "hash": "2b0bc6739caf8cf694907513273abfd47d739b386dd968d3a72da933f1f0b9f9",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_homogeneous:deep_research:high_0p95": [
+      {
+        "sample_index": 0,
+        "request_id": "request_87",
+        "hash": "09a7515323c94306ef6e93bcfbe0cef2d97bab8e3b4f1e514a184de3ce235d0a",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_118",
+        "hash": "1d13de279feb80b2b819b77c42d591bef9e2ddc722ee8233a37a88c0786d1b62",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_9",
+        "hash": "00f974211c17ec833d1ad2f9bd42f7065b6a087471339e90563669dc953cdeda",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_56",
+        "hash": "0b3efdbd72740005439d51249b24c9ddada11bc57e52295da0a249f8dddc5c23",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_104",
+        "hash": "022bf43bb7f486e73a86907e8d7b73742e3ba6f5682123e3bd3c93f80435ec5f",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_116",
+        "hash": "0a05c91bb47a3fb76abc00b53b8b0bd2f577f5be71966d69e1866c40f0a04973",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_23",
+        "hash": "07cd3d30fd400b8c1484e0958fbbfbd1e2815144db45da5e33e1dc799e55814e",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_8",
+        "hash": "153a5a3e4960f35b9a52b88a6e609f8a3cda9ef370b52f38cf1c9950b4e82da1",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:interactive:low_0p60": [
+      {
+        "sample_index": 0,
+        "request_id": "request_114",
+        "hash": "0029504e3292defc4c39b7f5310953cb1e48583f062cef34e3c5e3a64e17f766",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_286",
+        "hash": "01f2efd441955c805ef2350c2b0a6564ef7003c341575797a363004e0f10d805",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_10",
+        "hash": "029805de1884a2222a9101e9c12111bbd28ca45fb3b2e7660d881af7b8b37fc0",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_276",
+        "hash": "0690cebe90adf6d77445c552ba7c25fde329ab496784467a005e655f5c0ac421",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_93",
+        "hash": "00e7a93487d1325ea91942389e10c86edfe43bc265c615177502a4ca4e8b8e23",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_90",
+        "hash": "02b07ef519171f2ca182997a47e33063cdf50f4c5fb02f6c02207f798f65c2c9",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_3",
+        "hash": "96f7fb15df5fdbc13fd8bcb3ae8a4d5494d549002053e0000d640561ae305eb9",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_197",
+        "hash": "9ffbfb503e08ec8ac3e39a4cc65b737d743e63ee3306d640186e5c01206528ec",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:interactive:medium_0p80": [
+      {
+        "sample_index": 0,
+        "request_id": "request_254",
+        "hash": "011d2600c037c060d2fb16ee85961e3b128c40791e4e097387acc1590974672e",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_181",
+        "hash": "048600d6e651b6bdf82527075f429ac67668691369ff3a0158e882f12c7c4ddb",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_115",
+        "hash": "039a794566949a475392bebf8e7f94d7e5807563060ae258ce3cc615abb249b9",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_18",
+        "hash": "04c74c7222bda17a7d130574db105cbf0aaadd77536587a4ce5a34927852178c",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_295",
+        "hash": "0517d4175309324b889eaeb84eacc4f51ad1e416aef114629cdda2ce6fb79a62",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_273",
+        "hash": "064b36f42a72e157adebb11dc8449a07106cbff29474f9b4abbf59cd7efb3fc7",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_205",
+        "hash": "0dff4dcc1af6e7502f528ba6a295527514376c4ae4a74064491f12ec76566078",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_63",
+        "hash": "0f98262653e5790010d56ec0ba87f008892aa62a730ec477a527cd65aba386b5",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:interactive:high_0p95": [
+      {
+        "sample_index": 0,
+        "request_id": "request_292",
+        "hash": "0030c6c4d1d5f11665f612ad64afd4f42eb8e87d30b14819a77911da7feb35a6",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_225",
+        "hash": "00fd649248c6ea63a74d20d0614840e9e2ba6468ab59c1681b422a7a8d14fb24",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_61",
+        "hash": "01045411644b5ea7fc2aa96b93145415c39df1b3aa6247fe6206fd3ec7abfb64",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_133",
+        "hash": "0277cc2088935f9bac4e1b20b416f4306a951a0963d0495b7ce2fbcf2b2b96c9",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_127",
+        "hash": "01a62d30d66a645fc1af899ffbef91a46c34d579374ad8df3927f1b56577de6f",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_29",
+        "hash": "09c80e261b3dac2b261dfa52718f570f7ec9aaa2c49c841a4b24ccc07d17ad8d",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_43",
+        "hash": "00f5540005ab4ba591a13d0ace4e5094c81f38aabbcd2c2206cc141bb75af9a9",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_76",
+        "hash": "14d7e952a6b8a67714b9577c4f9e25d9d49428242279f9b2b74d933ad5ec0be7",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:reasoning:low_0p60": [
+      {
+        "sample_index": 0,
+        "request_id": "request_94",
+        "hash": "0d8d91ea5fd279792a7ab5ceb33abc489fa11ac7203b39767a71d63822e31e35",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_49",
+        "hash": "14de7b4459beab34022c1ca59adafa459eee656ec76c0ce42b9d94a8629a0958",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_35",
+        "hash": "00a577d4da6ac2e11eb7b6e90abaacfb8da33fb0dd2b7237e531a87b904782b6",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_22",
+        "hash": "00ede4d10c4228537ed9ce10643a44529a38c1d4b2a4f2e2491e9730ff3a4169",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_107",
+        "hash": "1b74476d7a1c00884ce2df3b90b673fb91681fbe66b0cf5646261e9d8ddb363f",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_112",
+        "hash": "7b05da082252cf66ad96ae3fde2bc97a1c69de7c02ff8557d742280fc3480622",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_110",
+        "hash": "37f8f8c5f855beb93be543b58e6a736cb1f9d0426d845833607ef8409d92348f",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_97",
+        "hash": "492e962ca9840b4cc2f90ecbaee7541bf8cc93ac03b73464263a28cdcca1758b",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:reasoning:medium_0p80": [
+      {
+        "sample_index": 0,
+        "request_id": "request_126",
+        "hash": "067593b0e7bf40767e6c0a8cee492aa11b58b0244072f66e0cce8162037ac0d3",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_100",
+        "hash": "0d08d861edf8941a6f9727b5cccf756c4e98f41a27880f804b585c73d6159971",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_55",
+        "hash": "01bfc3619e7e61ee553f3d80c52aba853a3103763e6da9b7978bca48dde8f973",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_63",
+        "hash": "02094092f95747eaffbba2db0494fcf82e638e1c4f418e9088f5a4854ea4c0de",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_93",
+        "hash": "12baa0e8351f8498024610d890e39ad8b9146e794fbceb6d90f774cead3de694",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_90",
+        "hash": "264e94d683c4622f7bf4ef65edfb33842128e5dd88be076f9518d2940245f502",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_131",
+        "hash": "01d63c259af1d4d5419a7138efcad55c0174dd74418bb89b786d2d3e756084d0",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_115",
+        "hash": "042bb78c9e1b655439c3c8c5004938b7b36a13cceeed54316299cafedff427bd",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:reasoning:high_0p95": [
+      {
+        "sample_index": 0,
+        "request_id": "request_79",
+        "hash": "08ca0cf75bcfabfb871ba6642844b26acbffa4f23367bc546027a7dc99d808f7",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_151",
+        "hash": "0c45662daab67d73b8657b1855248a3db6fb4b406ca6b5a04ddfe39dc0e2526a",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_27",
+        "hash": "00f34f92f851f5478c52550e02819b39bb760bfa4bbe706857e040ec009f8e59",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_69",
+        "hash": "038dbcd68b71b1b6f33735b9c0f18e707d86a2f28d348a0ab50cd10fa4caf224",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_99",
+        "hash": "0a77d74cda143a41c53084110eab6ff115088951a733cc802608114208804223",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_93",
+        "hash": "0f2484612ec0794652d9dbdde117c5a3e1bd98a3a838a30b6233349d90e1b0ca",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_54",
+        "hash": "2271b2b158eaabf5f29379c19ed1c818c7b57f7e6e96310c75e93d4da7be4f6d",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_55",
+        "hash": "245cf0853c8751935f19f93784c71fb5c4c0f7454c9a810fa29c5e73b668c4e2",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:deep_research:low_0p60": [
+      {
+        "sample_index": 0,
+        "request_id": "request_80",
+        "hash": "06264d5f388d927c78114068e3bda104e859b89db7c321c3d0697d8c5a9d8250",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_90",
+        "hash": "091f9cf1654ded2300e3f4ab8aac73c9a90b328806714af70a3cda411a8cc4ad",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_18",
+        "hash": "074e4ff33301bcc9fed48493b29b44924eb925d6bb49ce959e1c2fd35865a7b7",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_63",
+        "hash": "0bbbe5b70d8ad05e0e4db5629af52f83ded39aa9c2ec2fb86f68240958e2db6a",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_12",
+        "hash": "004bd2d956e2b453de36c0ed3dfb4602f7ffb37323b1409643648ece96fea01b",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_55",
+        "hash": "03e672b852635dfa1e74ca3d233e0fd72e8e7323591982b686105bc8df14ebf3",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_28",
+        "hash": "144f42f48909a9f368953fd8a988267972fdffdd1266559ba3859801aba9f9d4",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_149",
+        "hash": "86e853e33e2e02abb353729f4562655d1a9055b171167d626895cce71111382d",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:deep_research:medium_0p80": [
+      {
+        "sample_index": 0,
+        "request_id": "request_31",
+        "hash": "02e44b7694e7bede5ac9982b179173bbf0fb48f593d8b06cfe1dbd7f3457a181",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_113",
+        "hash": "043d5bd12ec719932b8a3c0c5a4e9b5d8ee51e3eea5386d1d69abbb0a69989b3",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_106",
+        "hash": "03fc9c8faa3ff30cd879736ccfbe91acc5d091335172ebf478aa51f6151d8231",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_21",
+        "hash": "0993017e479f7475052ccf32d8d806323d78dad67a6026dc166de98b9245e5fd",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_159",
+        "hash": "0c6708643917a3bc897c8649096dbe384091c2ea8b5dd9b82099274ad2c5f1e7",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_143",
+        "hash": "0e01600c3ca035c965e8a5c1cc0be4f26239e34f65d7cf160ed0d90165f78cfb",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_101",
+        "hash": "0fe8ae33dda88585bc1e607c4c22c4e5bda8b7b4711a88f0746abb036cfd44ba",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_63",
+        "hash": "16b6b323201a51c6927b6fa0e83b6d78574f5d35c55151e3fcaec75fef1a5544",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ],
+    "h100_a100_realistic:deep_research:high_0p95": [
+      {
+        "sample_index": 0,
+        "request_id": "request_137",
+        "hash": "00c0eb725a5014ba3ddb404737c13b33c1ac8647c29a7b766c3ad287856661d7",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 1,
+        "request_id": "request_143",
+        "hash": "017ece41c0862ee7c81bff5abbba52256efe8b102c9c97fc71f3e43d524781c7",
+        "chosen": {
+          "action": "instance_1:instance_0",
+          "decode_instance": "instance_1",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 2,
+        "request_id": "request_109",
+        "hash": "05a056d7aa2b2bf389a14cfc23ee45a3f67ef999a6c99e0673911e94c9b442b8",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 3,
+        "request_id": "request_81",
+        "hash": "0b4e6a45743ff374151087f6c7166f713db4a484f60965caa1b3ba70f2e4b714",
+        "chosen": {
+          "action": "instance_1:local",
+          "decode_instance": "instance_1",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 4,
+        "request_id": "request_31",
+        "hash": "05cabf9d2f718a674e5069683c50346eb1278f19a4be9bd4ac0f5e896d14f409",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 5,
+        "request_id": "request_119",
+        "hash": "061338cbf7f63cd5f21db9d7eea956c75c9730d08ec1e8a950514a7b3c7eac76",
+        "chosen": {
+          "action": "instance_2:instance_0",
+          "decode_instance": "instance_2",
+          "prefill_instance": "instance_0",
+          "local": false
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 6,
+        "request_id": "request_149",
+        "hash": "019c8a67fa9a3fa70d0ace0373438ff57b22c7cd14f05a93b66c5d4612d4aad2",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      },
+      {
+        "sample_index": 7,
+        "request_id": "request_101",
+        "hash": "0bfb829ff9670fe07018670ada6f6e2ffcfdc2c52387760627103f6dc9cbba31",
+        "chosen": {
+          "action": "instance_2:local",
+          "decode_instance": "instance_2",
+          "prefill_instance": "local",
+          "local": true
+        },
+        "actions": {
+          "instance_1:local": {
+            "action": "instance_1:local",
+            "decode_instance": "instance_1",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_1:instance_0": {
+            "action": "instance_1:instance_0",
+            "decode_instance": "instance_1",
+            "prefill_instance": "instance_0",
+            "local": false
+          },
+          "instance_2:local": {
+            "action": "instance_2:local",
+            "decode_instance": "instance_2",
+            "prefill_instance": "local",
+            "local": true
+          },
+          "instance_2:instance_0": {
+            "action": "instance_2:instance_0",
+            "decode_instance": "instance_2",
+            "prefill_instance": "instance_0",
+            "local": false
+          }
+        }
+      }
+    ]
+  }
+}

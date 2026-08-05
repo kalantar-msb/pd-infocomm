@@ -1,0 +1,557 @@
+{
+  "1p3d": {
+    "interactive": {
+      "selected_phi": 0.75,
+      "calibration_mean_goodput": 0.9816666666666667,
+      "calibration_stdev_goodput": 0.0023570226039551345,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 0.9766666666666667,
+          "stdev": 0.004714045207910269,
+          "values": {
+            "42": 0.9733333333333334,
+            "123": 0.98
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 0.9783333333333333,
+          "stdev": 0.0023570226039551345,
+          "values": {
+            "42": 0.9766666666666667,
+            "123": 0.98
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 0.98,
+          "stdev": 0.0,
+          "values": {
+            "42": 0.98,
+            "123": 0.98
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 0.9816666666666667,
+          "stdev": 0.0023570226039551345,
+          "values": {
+            "42": 0.9833333333333333,
+            "123": 0.98
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 0.9550000000000001,
+          "stdev": 0.04949747468305829,
+          "values": {
+            "42": 0.99,
+            "123": 0.92
+          },
+          "eligible": true
+        }
+      ]
+    },
+    "reasoning": {
+      "selected_phi": 0.0,
+      "calibration_mean_goodput": 1.0,
+      "calibration_stdev_goodput": 0.0,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 1.0,
+          "stdev": 0.0,
+          "values": {
+            "42": 1.0,
+            "123": 1.0
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 1.0,
+          "stdev": 0.0,
+          "values": {
+            "42": 1.0,
+            "123": 1.0
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 1.0,
+          "stdev": 0.0,
+          "values": {
+            "42": 1.0,
+            "123": 1.0
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 1.0,
+          "stdev": 0.0,
+          "values": {
+            "42": 1.0,
+            "123": 1.0
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 1.0,
+          "stdev": 0.0,
+          "values": {
+            "42": 1.0,
+            "123": 1.0
+          },
+          "eligible": true
+        }
+      ]
+    },
+    "deep_research": {
+      "selected_phi": 0.75,
+      "calibration_mean_goodput": 0.896875,
+      "calibration_stdev_goodput": 0.02209708691207961,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 0.8374999999999999,
+          "stdev": 0.017677669529663705,
+          "values": {
+            "42": 0.85,
+            "123": 0.825
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 0.85625,
+          "stdev": 0.017677669529663705,
+          "values": {
+            "42": 0.86875,
+            "123": 0.84375
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 0.878125,
+          "stdev": 0.013258252147247719,
+          "values": {
+            "42": 0.86875,
+            "123": 0.8875
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 0.896875,
+          "stdev": 0.02209708691207961,
+          "values": {
+            "42": 0.88125,
+            "123": 0.9125
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 0.884375,
+          "stdev": 0.02209708691207961,
+          "values": {
+            "42": 0.9,
+            "123": 0.86875
+          },
+          "eligible": true
+        }
+      ]
+    }
+  },
+  "2p2d": {
+    "interactive": {
+      "selected_phi": 1.0,
+      "calibration_mean_goodput": 0.98,
+      "calibration_stdev_goodput": 0.0,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 0.9133333333333333,
+          "stdev": 0.004714045207910269,
+          "values": {
+            "42": 0.91,
+            "123": 0.9166666666666666
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 0.9366666666666666,
+          "stdev": 0.0,
+          "values": {
+            "42": 0.9366666666666666,
+            "123": 0.9366666666666666
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 0.9516666666666667,
+          "stdev": 0.007071067811865481,
+          "values": {
+            "42": 0.9466666666666667,
+            "123": 0.9566666666666667
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 0.9683333333333334,
+          "stdev": 0.007071067811865481,
+          "values": {
+            "42": 0.9633333333333334,
+            "123": 0.9733333333333334
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 0.98,
+          "stdev": 0.0,
+          "values": {
+            "42": 0.98,
+            "123": 0.98
+          },
+          "eligible": true
+        }
+      ]
+    },
+    "reasoning": {
+      "selected_phi": 0.0,
+      "calibration_mean_goodput": 1.0,
+      "calibration_stdev_goodput": 0.0,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 1.0,
+          "stdev": 0.0,
+          "values": {
+            "42": 1.0,
+            "123": 1.0
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 0.990625,
+          "stdev": 0.013258252147247797,
+          "values": {
+            "42": 1.0,
+            "123": 0.98125
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 0.99375,
+          "stdev": 0.008838834764831813,
+          "values": {
+            "42": 1.0,
+            "123": 0.9875
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 0.9875,
+          "stdev": 0.017677669529663705,
+          "values": {
+            "42": 1.0,
+            "123": 0.975
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 1.0,
+          "stdev": 0.0,
+          "values": {
+            "42": 1.0,
+            "123": 1.0
+          },
+          "eligible": true
+        }
+      ]
+    },
+    "deep_research": {
+      "selected_phi": 1.0,
+      "calibration_mean_goodput": 0.85625,
+      "calibration_stdev_goodput": 0.017677669529663705,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 0.740625,
+          "stdev": 0.013258252147247797,
+          "values": {
+            "42": 0.73125,
+            "123": 0.75
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 0.8031250000000001,
+          "stdev": 0.03977475644174332,
+          "values": {
+            "42": 0.775,
+            "123": 0.83125
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 0.8125,
+          "stdev": 0.008838834764831813,
+          "values": {
+            "42": 0.80625,
+            "123": 0.81875
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 0.840625,
+          "stdev": 0.02209708691207961,
+          "values": {
+            "42": 0.85625,
+            "123": 0.825
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 0.85625,
+          "stdev": 0.017677669529663705,
+          "values": {
+            "42": 0.84375,
+            "123": 0.86875
+          },
+          "eligible": true
+        }
+      ]
+    }
+  },
+  "3p1d": {
+    "interactive": {
+      "selected_phi": 1.0,
+      "calibration_mean_goodput": 0.8666666666666667,
+      "calibration_stdev_goodput": 0.014142135623730963,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 0.29166666666666663,
+          "stdev": 0.02592724864350675,
+          "values": {
+            "42": 0.2733333333333333,
+            "123": 0.31
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 0.5883333333333334,
+          "stdev": 0.05892556509887899,
+          "values": {
+            "42": 0.5466666666666666,
+            "123": 0.63
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 0.7516666666666667,
+          "stdev": 0.03535533905932733,
+          "values": {
+            "42": 0.7766666666666666,
+            "123": 0.7266666666666667
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 0.815,
+          "stdev": 0.025927248643506793,
+          "values": {
+            "42": 0.8333333333333334,
+            "123": 0.7966666666666666
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 0.8666666666666667,
+          "stdev": 0.014142135623730963,
+          "values": {
+            "42": 0.8766666666666667,
+            "123": 0.8566666666666667
+          },
+          "eligible": true
+        }
+      ]
+    },
+    "reasoning": {
+      "selected_phi": 0.0,
+      "calibration_mean_goodput": 0.9593750000000001,
+      "calibration_stdev_goodput": 0.004419417382415906,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 0.9593750000000001,
+          "stdev": 0.004419417382415906,
+          "values": {
+            "42": 0.9625,
+            "123": 0.95625
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 0.9593750000000001,
+          "stdev": 0.004419417382415906,
+          "values": {
+            "42": 0.9625,
+            "123": 0.95625
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 0.9593750000000001,
+          "stdev": 0.004419417382415906,
+          "values": {
+            "42": 0.9625,
+            "123": 0.95625
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 0.9593750000000001,
+          "stdev": 0.004419417382415906,
+          "values": {
+            "42": 0.9625,
+            "123": 0.95625
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 0.9593750000000001,
+          "stdev": 0.004419417382415906,
+          "values": {
+            "42": 0.9625,
+            "123": 0.95625
+          },
+          "eligible": true
+        }
+      ]
+    },
+    "deep_research": {
+      "selected_phi": 1.0,
+      "calibration_mean_goodput": 0.859375,
+      "calibration_stdev_goodput": 0.004419417382415984,
+      "calibration_seeds": [
+        42,
+        123
+      ],
+      "grid": [
+        {
+          "phi": 0.0,
+          "mean": 0.728125,
+          "stdev": 0.013258252147247797,
+          "values": {
+            "42": 0.7375,
+            "123": 0.71875
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.25,
+          "mean": 0.778125,
+          "stdev": 0.004419417382415906,
+          "values": {
+            "42": 0.775,
+            "123": 0.78125
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.5,
+          "mean": 0.79375,
+          "stdev": 0.0,
+          "values": {
+            "42": 0.79375,
+            "123": 0.79375
+          },
+          "eligible": true
+        },
+        {
+          "phi": 0.75,
+          "mean": 0.828125,
+          "stdev": 0.004419417382415984,
+          "values": {
+            "42": 0.825,
+            "123": 0.83125
+          },
+          "eligible": true
+        },
+        {
+          "phi": 1.0,
+          "mean": 0.859375,
+          "stdev": 0.004419417382415984,
+          "values": {
+            "42": 0.85625,
+            "123": 0.8625
+          },
+          "eligible": true
+        }
+      ]
+    }
+  }
+}

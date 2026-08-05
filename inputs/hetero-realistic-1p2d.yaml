@@ -1,0 +1,25 @@
+node_pools:
+  - name: fast
+    gpu_type: H100
+    gpus_per_node: 8
+    gpu_memory_gib: 80.0
+    initial_nodes: 1
+    min_nodes: 1
+    max_nodes: 1
+    cost_per_hour: 0.0
+    provisioning_delay: {mean: 0.0, stddev: 0.0}
+  - name: slow
+    gpu_type: A100
+    gpus_per_node: 4
+    gpu_memory_gib: 80.0
+    initial_nodes: 1
+    min_nodes: 1
+    max_nodes: 1
+    cost_per_hour: 0.0
+    provisioning_delay: {mean: 0.0, stddev: 0.0}
+hw_config_by_gpu:
+  H100: {tflops_peak: 1979.0, bw_peak_tbs: 3.35, mfu_prefill: 0.5, mfu_decode: 0.5}
+  A100: {tflops_peak: 624.0, bw_peak_tbs: 2.039, mfu_prefill: 0.5, mfu_decode: 0.5}
+coeffs_by_gpu:
+  H100: scripts/calibration/coeffs-llama70b-h100-tp4.json
+  A100: scripts/calibration/coeffs-llama70b-a100real-tp4.json

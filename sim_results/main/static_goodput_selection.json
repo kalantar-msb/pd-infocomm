@@ -1,0 +1,6729 @@
+{
+  "h100_homogeneous": {
+    "interactive": {
+      "low_0p60": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 0.9916666666666667,
+        "calibration_stdev": 0.0023570226039551345,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 0.9766666666666667,
+            "stdev": 0.004714045207910269,
+            "values": {
+              "42": 0.9733333333333334,
+              "123": 0.98
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 0.98,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.98,
+              "123": 0.98
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 0.98,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.98,
+              "123": 0.98
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 0.9833333333333334,
+            "stdev": 0.004714045207910347,
+            "values": {
+              "42": 0.9866666666666667,
+              "123": 0.98
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 0.9866666666666666,
+            "stdev": 0.004714045207910347,
+            "values": {
+              "42": 0.99,
+              "123": 0.9833333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.9,
+            "psi_a100": 0.5,
+            "mean": 0.9883333333333333,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.99,
+              "123": 0.9866666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 0.9916666666666667,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.9933333333333333,
+              "123": 0.99
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "medium_0p80": {
+        "selected_phi": 0.8,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 0.98,
+        "calibration_stdev": 0.0,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 0.9366666666666666,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9366666666666666,
+              "123": 0.9366666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 0.9533333333333334,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9533333333333334,
+              "123": 0.9533333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 0.9633333333333334,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9633333333333334,
+              "123": 0.9633333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 0.9716666666666667,
+            "stdev": 0.002357022603955213,
+            "values": {
+              "42": 0.97,
+              "123": 0.9733333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.7,
+            "psi_a100": 0.5,
+            "mean": 0.9733333333333334,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9733333333333334,
+              "123": 0.9733333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 0.98,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.98,
+              "123": 0.98
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.9,
+            "psi_a100": 0.5,
+            "mean": 0.98,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.98,
+              "123": 0.98
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 0.98,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.98,
+              "123": 0.98
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "high_0p95": {
+        "selected_phi": 0.9,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 0.9683333333333333,
+        "calibration_stdev": 0.0023570226039551345,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 0.8933333333333333,
+            "stdev": 0.004714045207910269,
+            "values": {
+              "42": 0.8966666666666666,
+              "123": 0.89
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 0.915,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.9133333333333333,
+              "123": 0.9166666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 0.9366666666666666,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9366666666666666,
+              "123": 0.9366666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 0.9516666666666667,
+            "stdev": 0.002357022603955213,
+            "values": {
+              "42": 0.95,
+              "123": 0.9533333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 0.9616666666666667,
+            "stdev": 0.002357022603955213,
+            "values": {
+              "42": 0.96,
+              "123": 0.9633333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.9,
+            "psi_a100": 0.5,
+            "mean": 0.9683333333333333,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.9666666666666667,
+              "123": 0.97
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 0.9683333333333333,
+            "stdev": 0.011785113019775828,
+            "values": {
+              "42": 0.9766666666666667,
+              "123": 0.96
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      }
+    },
+    "reasoning": {
+      "low_0p60": {
+        "selected_phi": 0.0,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 1.0,
+        "calibration_stdev": 0.0,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.1,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "medium_0p80": {
+        "selected_phi": 0.0,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 1.0,
+        "calibration_stdev": 0.0,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.1,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "high_0p95": {
+        "selected_phi": 0.0,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 1.0,
+        "calibration_stdev": 0.0,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.1,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 1.0,
+            "stdev": 0.0,
+            "values": {
+              "42": 1.0,
+              "123": 1.0
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      }
+    },
+    "deep_research": {
+      "low_0p60": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 0.9375,
+        "calibration_stdev": 0.008838834764831813,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 0.8843749999999999,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.8875,
+              "123": 0.88125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 0.90625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.90625,
+              "123": 0.90625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 0.909375,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.90625,
+              "123": 0.9125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 0.91875,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.91875,
+              "123": 0.91875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 0.9281250000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.925,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.9,
+            "psi_a100": 0.5,
+            "mean": 0.934375,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9375,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 0.9375,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.94375,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "medium_0p80": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 0.890625,
+        "calibration_stdev": 0.004419417382415984,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 0.809375,
+            "stdev": 0.03977475644174332,
+            "values": {
+              "42": 0.78125,
+              "123": 0.8375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 0.834375,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.825,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 0.84375,
+            "stdev": 0.017677669529663625,
+            "values": {
+              "42": 0.83125,
+              "123": 0.85625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 0.8625,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.86875,
+              "123": 0.85625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 0.88125,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.875,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.9,
+            "psi_a100": 0.5,
+            "mean": 0.8843749999999999,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.88125,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 0.890625,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.8875,
+              "123": 0.89375
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "high_0p95": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.5,
+        "calibration_mean_goodput": 0.85625,
+        "calibration_stdev": 0.00883883476483189,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.5,
+            "mean": 0.753125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.74375,
+              "123": 0.7625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.5,
+            "mean": 0.76875,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.7625,
+              "123": 0.775
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.5,
+            "mean": 0.790625,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.78125,
+              "123": 0.8
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.5,
+            "mean": 0.834375,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.81875,
+              "123": 0.85
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.5,
+            "mean": 0.840625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.83125,
+              "123": 0.85
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.9,
+            "psi_a100": 0.5,
+            "mean": 0.85,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.84375,
+              "123": 0.85625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_homogeneous",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 0.85625,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.85,
+              "123": 0.8625
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      }
+    }
+  },
+  "h100_a100_realistic": {
+    "interactive": {
+      "low_0p60": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.2,
+        "calibration_mean_goodput": 0.9750000000000001,
+        "calibration_stdev": 0.0023570226039551345,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.865,
+            "stdev": 0.0164991582276861,
+            "values": {
+              "42": 0.8766666666666667,
+              "123": 0.8533333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.95,
+            "stdev": 0.004714045207910347,
+            "values": {
+              "42": 0.9466666666666667,
+              "123": 0.9533333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.8816666666666667,
+            "stdev": 0.007071067811865481,
+            "values": {
+              "42": 0.8866666666666667,
+              "123": 0.8766666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.4766666666666667,
+            "stdev": 0.037712361663282505,
+            "values": {
+              "42": 0.5033333333333333,
+              "123": 0.45
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.21166666666666667,
+            "stdev": 0.01178511301977579,
+            "values": {
+              "42": 0.22,
+              "123": 0.20333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.0033333333333333335,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.0033333333333333335,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.8933333333333333,
+            "stdev": 0.009428090415820616,
+            "values": {
+              "42": 0.9,
+              "123": 0.8866666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.9566666666666667,
+            "stdev": 0.009428090415820694,
+            "values": {
+              "42": 0.95,
+              "123": 0.9633333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.9099999999999999,
+            "stdev": 0.004714045207910347,
+            "values": {
+              "42": 0.9133333333333333,
+              "123": 0.9066666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.5316666666666667,
+            "stdev": 0.021213203435596364,
+            "values": {
+              "42": 0.5466666666666666,
+              "123": 0.5166666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.22666666666666668,
+            "stdev": 0.018856180831641253,
+            "values": {
+              "42": 0.24,
+              "123": 0.21333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.005,
+            "stdev": 0.0023570226039551587,
+            "values": {
+              "42": 0.006666666666666667,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.9033333333333333,
+            "stdev": 0.014142135623730963,
+            "values": {
+              "42": 0.9133333333333333,
+              "123": 0.8933333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.9616666666666667,
+            "stdev": 0.007071067811865481,
+            "values": {
+              "42": 0.9566666666666667,
+              "123": 0.9666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.9216666666666666,
+            "stdev": 0.011785113019775828,
+            "values": {
+              "42": 0.93,
+              "123": 0.9133333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.5316666666666667,
+            "stdev": 0.021213203435596364,
+            "values": {
+              "42": 0.5466666666666666,
+              "123": 0.5166666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.25,
+            "stdev": 0.014142135623730963,
+            "values": {
+              "42": 0.26,
+              "123": 0.24
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.013333333333333334,
+            "stdev": 0.009428090415820633,
+            "values": {
+              "42": 0.02,
+              "123": 0.006666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.9283333333333333,
+            "stdev": 0.007071067811865481,
+            "values": {
+              "42": 0.9333333333333333,
+              "123": 0.9233333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.97,
+            "stdev": 0.004714045207910347,
+            "values": {
+              "42": 0.9666666666666667,
+              "123": 0.9733333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.915,
+            "stdev": 0.007071067811865481,
+            "values": {
+              "42": 0.92,
+              "123": 0.91
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.8116666666666666,
+            "stdev": 0.03535533905932741,
+            "values": {
+              "42": 0.8366666666666667,
+              "123": 0.7866666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.28500000000000003,
+            "stdev": 0.0023570226039551735,
+            "values": {
+              "42": 0.2866666666666667,
+              "123": 0.2833333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.03166666666666667,
+            "stdev": 0.011785113019775792,
+            "values": {
+              "42": 0.04,
+              "123": 0.023333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.9416666666666667,
+            "stdev": 0.002357022603955213,
+            "values": {
+              "42": 0.9433333333333334,
+              "123": 0.94
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.9716666666666667,
+            "stdev": 0.002357022603955213,
+            "values": {
+              "42": 0.97,
+              "123": 0.9733333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.9266666666666666,
+            "stdev": 0.014142135623730963,
+            "values": {
+              "42": 0.9366666666666666,
+              "123": 0.9166666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.8116666666666666,
+            "stdev": 0.03535533905932741,
+            "values": {
+              "42": 0.8366666666666667,
+              "123": 0.7866666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.33,
+            "stdev": 0.014142135623730963,
+            "values": {
+              "42": 0.34,
+              "123": 0.32
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.051666666666666666,
+            "stdev": 0.0023570226039551587,
+            "values": {
+              "42": 0.05333333333333334,
+              "123": 0.05
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.9,
+            "psi_a100": 0.1,
+            "mean": 0.9683333333333334,
+            "stdev": 0.007071067811865481,
+            "values": {
+              "42": 0.9633333333333334,
+              "123": 0.9733333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.9,
+            "psi_a100": 0.2,
+            "mean": 0.9716666666666667,
+            "stdev": 0.002357022603955213,
+            "values": {
+              "42": 0.97,
+              "123": 0.9733333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 0.9,
+            "psi_a100": 0.3,
+            "mean": 0.9583333333333333,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.9566666666666667,
+              "123": 0.96
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.95,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.95,
+              "123": 0.95
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.1,
+            "mean": 0.97,
+            "stdev": 0.004714045207910347,
+            "values": {
+              "42": 0.9666666666666667,
+              "123": 0.9733333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.9750000000000001,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.9766666666666667,
+              "123": 0.9733333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.3,
+            "mean": 0.96,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.96,
+              "123": 0.96
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.9283333333333333,
+            "stdev": 0.01178511301977575,
+            "values": {
+              "42": 0.9366666666666666,
+              "123": 0.92
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.8116666666666666,
+            "stdev": 0.03535533905932741,
+            "values": {
+              "42": 0.8366666666666667,
+              "123": 0.7866666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.32833333333333337,
+            "stdev": 0.016499158227686137,
+            "values": {
+              "42": 0.34,
+              "123": 0.31666666666666665
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.07,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.07,
+              "123": 0.07
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "medium_0p80": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.3,
+        "calibration_mean_goodput": 0.9433333333333334,
+        "calibration_stdev": 0.0,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.6466666666666667,
+            "stdev": 0.02357022603955158,
+            "values": {
+              "42": 0.63,
+              "123": 0.6633333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.8683333333333334,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.87,
+              "123": 0.8666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.7766666666666666,
+            "stdev": 0.028284271247461846,
+            "values": {
+              "42": 0.7566666666666667,
+              "123": 0.7966666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.41833333333333333,
+            "stdev": 0.025927248643506713,
+            "values": {
+              "42": 0.43666666666666665,
+              "123": 0.4
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.20500000000000002,
+            "stdev": 0.002357022603955154,
+            "values": {
+              "42": 0.20666666666666667,
+              "123": 0.20333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.0016666666666666668,
+            "stdev": 0.0023570226039551587,
+            "values": {
+              "42": 0.0,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.7216666666666667,
+            "stdev": 0.030641293851417062,
+            "values": {
+              "42": 0.7433333333333333,
+              "123": 0.7
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.88,
+            "stdev": 0.004714045207910269,
+            "values": {
+              "42": 0.8766666666666667,
+              "123": 0.8833333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.8616666666666667,
+            "stdev": 0.01178511301977575,
+            "values": {
+              "42": 0.87,
+              "123": 0.8533333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.44,
+            "stdev": 0.018856180831641232,
+            "values": {
+              "42": 0.4533333333333333,
+              "123": 0.4266666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.20666666666666667,
+            "stdev": 0.004714045207910308,
+            "values": {
+              "42": 0.21,
+              "123": 0.20333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.0016666666666666668,
+            "stdev": 0.0023570226039551587,
+            "values": {
+              "42": 0.0,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.7633333333333333,
+            "stdev": 0.04242640687119289,
+            "values": {
+              "42": 0.7933333333333333,
+              "123": 0.7333333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.8983333333333333,
+            "stdev": 0.002357022603955213,
+            "values": {
+              "42": 0.8966666666666666,
+              "123": 0.9
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.8866666666666667,
+            "stdev": 0.009428090415820616,
+            "values": {
+              "42": 0.8933333333333333,
+              "123": 0.88
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.44,
+            "stdev": 0.018856180831641232,
+            "values": {
+              "42": 0.4533333333333333,
+              "123": 0.4266666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.21666666666666667,
+            "stdev": 0.009428090415820635,
+            "values": {
+              "42": 0.22333333333333333,
+              "123": 0.21
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.005,
+            "stdev": 0.0023570226039551587,
+            "values": {
+              "42": 0.006666666666666667,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.7933333333333333,
+            "stdev": 0.037712361663282463,
+            "values": {
+              "42": 0.82,
+              "123": 0.7666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.9183333333333333,
+            "stdev": 0.01178511301977575,
+            "values": {
+              "42": 0.91,
+              "123": 0.9266666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.8716666666666666,
+            "stdev": 0.011785113019775828,
+            "values": {
+              "42": 0.88,
+              "123": 0.8633333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.5566666666666666,
+            "stdev": 0.07071067811865474,
+            "values": {
+              "42": 0.6066666666666667,
+              "123": 0.5066666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.245,
+            "stdev": 0.002357022603955154,
+            "values": {
+              "42": 0.24666666666666667,
+              "123": 0.24333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.011666666666666667,
+            "stdev": 0.0070710678118654745,
+            "values": {
+              "42": 0.016666666666666666,
+              "123": 0.006666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.8200000000000001,
+            "stdev": 0.04242640687119281,
+            "values": {
+              "42": 0.85,
+              "123": 0.79
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.925,
+            "stdev": 0.007071067811865481,
+            "values": {
+              "42": 0.92,
+              "123": 0.93
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.8966666666666667,
+            "stdev": 0.009428090415820616,
+            "values": {
+              "42": 0.9033333333333333,
+              "123": 0.89
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.5566666666666666,
+            "stdev": 0.07071067811865474,
+            "values": {
+              "42": 0.6066666666666667,
+              "123": 0.5066666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.27666666666666667,
+            "stdev": 0.014142135623730963,
+            "values": {
+              "42": 0.2866666666666667,
+              "123": 0.26666666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.028333333333333335,
+            "stdev": 0.0023570226039551566,
+            "values": {
+              "42": 0.02666666666666667,
+              "123": 0.03
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.9,
+            "psi_a100": 0.1,
+            "mean": 0.8933333333333333,
+            "stdev": 0.009428090415820616,
+            "values": {
+              "42": 0.9,
+              "123": 0.8866666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.9,
+            "psi_a100": 0.2,
+            "mean": 0.9333333333333333,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9333333333333333,
+              "123": 0.9333333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 0.9,
+            "psi_a100": 0.3,
+            "mean": 0.9383333333333332,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.94,
+              "123": 0.9366666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.845,
+            "stdev": 0.025927248643506713,
+            "values": {
+              "42": 0.8633333333333333,
+              "123": 0.8266666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.1,
+            "mean": 0.9083333333333333,
+            "stdev": 0.01178511301977575,
+            "values": {
+              "42": 0.9166666666666666,
+              "123": 0.9
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.94,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.94,
+              "123": 0.94
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.3,
+            "mean": 0.9433333333333334,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9433333333333334,
+              "123": 0.9433333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.8966666666666667,
+            "stdev": 0.009428090415820616,
+            "values": {
+              "42": 0.9033333333333333,
+              "123": 0.89
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.5566666666666666,
+            "stdev": 0.07071067811865474,
+            "values": {
+              "42": 0.6066666666666667,
+              "123": 0.5066666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.27666666666666667,
+            "stdev": 0.014142135623730963,
+            "values": {
+              "42": 0.2866666666666667,
+              "123": 0.26666666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.05333333333333333,
+            "stdev": 0.00942809041582063,
+            "values": {
+              "42": 0.06,
+              "123": 0.04666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "high_0p95": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.3,
+        "calibration_mean_goodput": 0.9116666666666666,
+        "calibration_stdev": 0.011785113019775828,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.23333333333333334,
+            "stdev": 0.04242640687119283,
+            "values": {
+              "42": 0.2633333333333333,
+              "123": 0.20333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.7849999999999999,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.7866666666666666,
+              "123": 0.7833333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.6733333333333333,
+            "stdev": 0.018856180831641232,
+            "values": {
+              "42": 0.66,
+              "123": 0.6866666666666666
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.405,
+            "stdev": 0.016499158227686137,
+            "values": {
+              "42": 0.4166666666666667,
+              "123": 0.3933333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.20166666666666666,
+            "stdev": 0.002357022603955154,
+            "values": {
+              "42": 0.2,
+              "123": 0.20333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.0016666666666666668,
+            "stdev": 0.0023570226039551587,
+            "values": {
+              "42": 0.0,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.33666666666666667,
+            "stdev": 0.004714045207910347,
+            "values": {
+              "42": 0.3333333333333333,
+              "123": 0.34
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.8,
+            "stdev": 0.004714045207910347,
+            "values": {
+              "42": 0.7966666666666666,
+              "123": 0.8033333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.7966666666666666,
+            "stdev": 0.02357022603955158,
+            "values": {
+              "42": 0.78,
+              "123": 0.8133333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.41500000000000004,
+            "stdev": 0.02592724864350675,
+            "values": {
+              "42": 0.43333333333333335,
+              "123": 0.39666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.20500000000000002,
+            "stdev": 0.002357022603955154,
+            "values": {
+              "42": 0.20666666666666667,
+              "123": 0.20333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.0016666666666666668,
+            "stdev": 0.0023570226039551587,
+            "values": {
+              "42": 0.0,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.44833333333333336,
+            "stdev": 0.05421151989096868,
+            "values": {
+              "42": 0.4866666666666667,
+              "123": 0.41
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.8333333333333333,
+            "stdev": 0.009428090415820616,
+            "values": {
+              "42": 0.84,
+              "123": 0.8266666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.8533333333333333,
+            "stdev": 0.014142135623730885,
+            "values": {
+              "42": 0.8633333333333333,
+              "123": 0.8433333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.41833333333333333,
+            "stdev": 0.021213203435596444,
+            "values": {
+              "42": 0.43333333333333335,
+              "123": 0.4033333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.21166666666666667,
+            "stdev": 0.007071067811865481,
+            "values": {
+              "42": 0.21666666666666667,
+              "123": 0.20666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.0016666666666666668,
+            "stdev": 0.0023570226039551587,
+            "values": {
+              "42": 0.0,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.565,
+            "stdev": 0.06363961030678926,
+            "values": {
+              "42": 0.61,
+              "123": 0.52
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.8600000000000001,
+            "stdev": 0.009428090415820616,
+            "values": {
+              "42": 0.8533333333333334,
+              "123": 0.8666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.8066666666666666,
+            "stdev": 0.02357022603955158,
+            "values": {
+              "42": 0.79,
+              "123": 0.8233333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.5,
+            "stdev": 0.04714045207910316,
+            "values": {
+              "42": 0.5333333333333333,
+              "123": 0.4666666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.23333333333333334,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.23333333333333334,
+              "123": 0.23333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.006666666666666667,
+            "stdev": 0.004714045207910317,
+            "values": {
+              "42": 0.01,
+              "123": 0.0033333333333333335
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.7216666666666667,
+            "stdev": 0.03535533905932741,
+            "values": {
+              "42": 0.7466666666666667,
+              "123": 0.6966666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.885,
+            "stdev": 0.002357022603955213,
+            "values": {
+              "42": 0.8833333333333333,
+              "123": 0.8866666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.8633333333333333,
+            "stdev": 0.009428090415820616,
+            "values": {
+              "42": 0.87,
+              "123": 0.8566666666666667
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.5033333333333333,
+            "stdev": 0.04242640687119285,
+            "values": {
+              "42": 0.5333333333333333,
+              "123": 0.47333333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.25666666666666665,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.25666666666666665,
+              "123": 0.25666666666666665
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.016666666666666666,
+            "stdev": 0.004714045207910317,
+            "values": {
+              "42": 0.02,
+              "123": 0.013333333333333334
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.9,
+            "psi_a100": 0.1,
+            "mean": 0.825,
+            "stdev": 0.021213203435596364,
+            "values": {
+              "42": 0.84,
+              "123": 0.81
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.9,
+            "psi_a100": 0.2,
+            "mean": 0.8916666666666666,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.8933333333333333,
+              "123": 0.89
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 0.9,
+            "psi_a100": 0.3,
+            "mean": 0.9066666666666667,
+            "stdev": 0.01885618083164131,
+            "values": {
+              "42": 0.92,
+              "123": 0.8933333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.77,
+            "stdev": 0.04242640687119289,
+            "values": {
+              "42": 0.8,
+              "123": 0.74
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.1,
+            "mean": 0.8416666666666667,
+            "stdev": 0.016499158227686175,
+            "values": {
+              "42": 0.8533333333333334,
+              "123": 0.83
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.9016666666666666,
+            "stdev": 0.0023570226039551345,
+            "values": {
+              "42": 0.9,
+              "123": 0.9033333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.3,
+            "mean": 0.9116666666666666,
+            "stdev": 0.011785113019775828,
+            "values": {
+              "42": 0.92,
+              "123": 0.9033333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.87,
+            "stdev": 0.014142135623730963,
+            "values": {
+              "42": 0.88,
+              "123": 0.86
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.5033333333333333,
+            "stdev": 0.04242640687119285,
+            "values": {
+              "42": 0.5333333333333333,
+              "123": 0.47333333333333333
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.25666666666666665,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.25666666666666665,
+              "123": 0.25666666666666665
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "interactive",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.04666666666666667,
+            "stdev": 0.009428090415820635,
+            "values": {
+              "42": 0.05333333333333334,
+              "123": 0.04
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      }
+    },
+    "reasoning": {
+      "low_0p60": {
+        "selected_phi": 0.0,
+        "selected_psi_a100": 0.2,
+        "calibration_mean_goodput": 0.984375,
+        "calibration_stdev": 0.004419417382415984,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.975,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.98125,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.1,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.984375,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.9875,
+              "123": 0.98125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.3,
+            "mean": 0.98125,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.9875,
+              "123": 0.975
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.971875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.975,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.953125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.8999999999999999,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9125,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.85625,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.86875,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.1,
+            "psi_a100": 0.1,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.1,
+            "psi_a100": 0.2,
+            "mean": 0.984375,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.9875,
+              "123": 0.98125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.1,
+            "psi_a100": 0.3,
+            "mean": 0.98125,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.9875,
+              "123": 0.975
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.975,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.98125,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.984375,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.9875,
+              "123": 0.98125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.971875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.975,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.953125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.8999999999999999,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9125,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.85625,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.86875,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.975,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.98125,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.984375,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.9875,
+              "123": 0.98125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.971875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.975,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.953125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.8999999999999999,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9125,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.85625,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.86875,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.975,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.98125,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.984375,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.9875,
+              "123": 0.98125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.971875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.975,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.953125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.8999999999999999,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9125,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.85625,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.86875,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.975,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.98125,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.984375,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.9875,
+              "123": 0.98125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.971875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.975,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.953125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.8999999999999999,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9125,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.85625,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.86875,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.975,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.98125,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.984375,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.9875,
+              "123": 0.98125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.971875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.975,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.953125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.8999999999999999,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9125,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.85625,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.86875,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "medium_0p80": {
+        "selected_phi": 0.0,
+        "selected_psi_a100": 0.2,
+        "calibration_mean_goodput": 0.978125,
+        "calibration_stdev": 0.013258252147247797,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.1,
+            "mean": 0.971875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.975,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.3,
+            "mean": 0.971875,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.98125,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.9625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9625,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.946875,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.95625,
+              "123": 0.9375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.884375,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.89375,
+              "123": 0.875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.828125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.8375,
+              "123": 0.81875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.1,
+            "psi_a100": 0.1,
+            "mean": 0.971875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.975,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.1,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.1,
+            "psi_a100": 0.3,
+            "mean": 0.971875,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.98125,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.9625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9625,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.946875,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.95625,
+              "123": 0.9375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.884375,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.89375,
+              "123": 0.875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.828125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.8375,
+              "123": 0.81875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.9625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9625,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.946875,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.95625,
+              "123": 0.9375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.8875,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9,
+              "123": 0.875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.828125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.8375,
+              "123": 0.81875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.9625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9625,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.946875,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.95625,
+              "123": 0.9375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.8875,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9,
+              "123": 0.875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.828125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.8375,
+              "123": 0.81875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.9625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9625,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.946875,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.95625,
+              "123": 0.9375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.8875,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9,
+              "123": 0.875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.828125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.8375,
+              "123": 0.81875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.9625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9625,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.946875,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.95625,
+              "123": 0.9375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.8875,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.9,
+              "123": 0.875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.828125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.8375,
+              "123": 0.81875
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "high_0p95": {
+        "selected_phi": 0.0,
+        "selected_psi_a100": 0.2,
+        "calibration_mean_goodput": 0.978125,
+        "calibration_stdev": 0.013258252147247797,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.95,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.95625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.1,
+            "mean": 0.9625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9625,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.3,
+            "mean": 0.971875,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.98125,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.940625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.95,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.878125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.8875,
+              "123": 0.86875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.821875,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.8375,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.1,
+            "psi_a100": 0.1,
+            "mean": 0.9625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.9625,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.1,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.1,
+            "psi_a100": 0.3,
+            "mean": 0.971875,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.98125,
+              "123": 0.9625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.95,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.95625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.940625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.95,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.878125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.8875,
+              "123": 0.86875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.821875,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.8375,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.95,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.95625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.940625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.95,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.878125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.8875,
+              "123": 0.86875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.821875,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.8375,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.95,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.95625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.940625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.95,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.878125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.8875,
+              "123": 0.86875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.821875,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.8375,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.95,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.95625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.940625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.95,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.878125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.8875,
+              "123": 0.86875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.821875,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.8375,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.95,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.95625,
+              "123": 0.94375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.978125,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.9875,
+              "123": 0.96875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.9593750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.9625,
+              "123": 0.95625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.940625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.95,
+              "123": 0.93125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.878125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.8875,
+              "123": 0.86875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "reasoning",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.821875,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.8375,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      }
+    },
+    "deep_research": {
+      "low_0p60": {
+        "selected_phi": 0.9,
+        "selected_psi_a100": 0.2,
+        "calibration_mean_goodput": 0.88125,
+        "calibration_stdev": 0.008838834764831813,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.746875,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.7625,
+              "123": 0.73125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.840625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.83125,
+              "123": 0.85
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.8343750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.8375,
+              "123": 0.83125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.584375,
+            "stdev": 0.10164659979556624,
+            "values": {
+              "42": 0.65625,
+              "123": 0.5125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.34375,
+            "stdev": 0.15909902576697318,
+            "values": {
+              "42": 0.45625,
+              "123": 0.23125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.06875,
+            "stdev": 0.04419417382415922,
+            "values": {
+              "42": 0.1,
+              "123": 0.0375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.765625,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.775,
+              "123": 0.75625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.85625,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.85,
+              "123": 0.8625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.8375,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.8375,
+              "123": 0.8375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.659375,
+            "stdev": 0.08396893026590253,
+            "values": {
+              "42": 0.71875,
+              "123": 0.6
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.37812500000000004,
+            "stdev": 0.16351844314938913,
+            "values": {
+              "42": 0.49375,
+              "123": 0.2625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.115625,
+            "stdev": 0.10164659979556621,
+            "values": {
+              "42": 0.1875,
+              "123": 0.04375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.7718750000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.775,
+              "123": 0.76875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.86875,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.8625,
+              "123": 0.875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.85,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.85625,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.6625,
+            "stdev": 0.08838834764831845,
+            "values": {
+              "42": 0.725,
+              "123": 0.6
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.42500000000000004,
+            "stdev": 0.18561553006146872,
+            "values": {
+              "42": 0.55625,
+              "123": 0.29375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.16874999999999998,
+            "stdev": 0.167937860531805,
+            "values": {
+              "42": 0.2875,
+              "123": 0.05
+            },
+            "eligible": false,
+            "drops": 4
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.7875,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.7875,
+              "123": 0.7875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.878125,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.875,
+              "123": 0.88125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.846875,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.85,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.765625,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.76875,
+              "123": 0.7625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.49375,
+            "stdev": 0.1414213562373095,
+            "values": {
+              "42": 0.59375,
+              "123": 0.39375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.215625,
+            "stdev": 0.1988737822087165,
+            "values": {
+              "42": 0.35625,
+              "123": 0.075
+            },
+            "eligible": false,
+            "drops": 3
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.8031250000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.8,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.878125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.86875,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.859375,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.86875,
+              "123": 0.85
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.76875,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.775,
+              "123": 0.7625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.628125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.61875,
+              "123": 0.6375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.2375,
+            "stdev": 0.2032931995911324,
+            "values": {
+              "42": 0.38125,
+              "123": 0.09375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.9,
+            "psi_a100": 0.1,
+            "mean": 0.8687499999999999,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.85625,
+              "123": 0.88125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.9,
+            "psi_a100": 0.2,
+            "mean": 0.88125,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.875,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 0.9,
+            "psi_a100": 0.3,
+            "mean": 0.8687499999999999,
+            "stdev": 0.026516504294495518,
+            "values": {
+              "42": 0.85,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.8187500000000001,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.80625,
+              "123": 0.83125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.1,
+            "mean": 0.871875,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.8625,
+              "123": 0.88125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.88125,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.875,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.3,
+            "mean": 0.8687499999999999,
+            "stdev": 0.026516504294495518,
+            "values": {
+              "42": 0.85,
+              "123": 0.8875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.8656250000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.86875,
+              "123": 0.8625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.76875,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.775,
+              "123": 0.7625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.625,
+            "stdev": 0.017677669529663625,
+            "values": {
+              "42": 0.6125,
+              "123": 0.6375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "low_0p60",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.278125,
+            "stdev": 0.20771261697354831,
+            "values": {
+              "42": 0.425,
+              "123": 0.13125
+            },
+            "eligible": true,
+            "drops": 0
+          }
+        ]
+      },
+      "medium_0p80": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.2,
+        "calibration_mean_goodput": 0.834375,
+        "calibration_stdev": 0.013258252147247797,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.46875,
+            "stdev": 0.19445436482630055,
+            "values": {
+              "42": 0.60625,
+              "123": 0.33125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.753125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.74375,
+              "123": 0.7625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.7718750000000001,
+            "stdev": 0.03977475644174332,
+            "values": {
+              "42": 0.8,
+              "123": 0.74375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.4875,
+            "stdev": 0.11490485194281395,
+            "values": {
+              "42": 0.56875,
+              "123": 0.40625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.271875,
+            "stdev": 0.05745242597140698,
+            "values": {
+              "42": 0.3125,
+              "123": 0.23125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.040625,
+            "stdev": 0.013258252147247768,
+            "values": {
+              "42": 0.05,
+              "123": 0.03125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.66875,
+            "stdev": 0.00883883476483189,
+            "values": {
+              "42": 0.675,
+              "123": 0.6625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.75625,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.75,
+              "123": 0.7625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.8,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.8125,
+              "123": 0.7875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.5218750000000001,
+            "stdev": 0.08396893026590253,
+            "values": {
+              "42": 0.58125,
+              "123": 0.4625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.290625,
+            "stdev": 0.08396893026590249,
+            "values": {
+              "42": 0.35,
+              "123": 0.23125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.04375,
+            "stdev": 0.008838834764831847,
+            "values": {
+              "42": 0.05,
+              "123": 0.0375
+            },
+            "eligible": false,
+            "drops": 1
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.6875,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.69375,
+              "123": 0.68125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.765625,
+            "stdev": 0.004419417382415984,
+            "values": {
+              "42": 0.7625,
+              "123": 0.76875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.815625,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.81875,
+              "123": 0.8125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.525,
+            "stdev": 0.08838834764831845,
+            "values": {
+              "42": 0.5875,
+              "123": 0.4625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.31875,
+            "stdev": 0.09722718241315029,
+            "values": {
+              "42": 0.3875,
+              "123": 0.25
+            },
+            "eligible": false,
+            "drops": 3
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.059375,
+            "stdev": 0.030935921676911456,
+            "values": {
+              "42": 0.08125,
+              "123": 0.0375
+            },
+            "eligible": false,
+            "drops": 9
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.69375,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.7,
+              "123": 0.6875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.796875,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.7875,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.815625,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.825,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.65,
+            "stdev": 0.053033008588991036,
+            "values": {
+              "42": 0.6875,
+              "123": 0.6125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.38749999999999996,
+            "stdev": 0.16793786053180504,
+            "values": {
+              "42": 0.50625,
+              "123": 0.26875
+            },
+            "eligible": false,
+            "drops": 2
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.08125,
+            "stdev": 0.035355339059327376,
+            "values": {
+              "42": 0.10625,
+              "123": 0.05625
+            },
+            "eligible": false,
+            "drops": 32
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.715625,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.71875,
+              "123": 0.7125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.828125,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.8125,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.825,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.825,
+              "123": 0.825
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.65,
+            "stdev": 0.053033008588991036,
+            "values": {
+              "42": 0.6875,
+              "123": 0.6125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.421875,
+            "stdev": 0.15467960838455727,
+            "values": {
+              "42": 0.53125,
+              "123": 0.3125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.1375,
+            "stdev": 0.09722718241315027,
+            "values": {
+              "42": 0.20625,
+              "123": 0.06875
+            },
+            "eligible": false,
+            "drops": 39
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.9,
+            "psi_a100": 0.1,
+            "mean": 0.78125,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.78125,
+              "123": 0.78125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.9,
+            "psi_a100": 0.2,
+            "mean": 0.83125,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.81875,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 0.9,
+            "psi_a100": 0.3,
+            "mean": 0.834375,
+            "stdev": 0.030935921676911424,
+            "values": {
+              "42": 0.8125,
+              "123": 0.85625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.73125,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.74375,
+              "123": 0.71875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.1,
+            "mean": 0.803125,
+            "stdev": 0.030935921676911424,
+            "values": {
+              "42": 0.78125,
+              "123": 0.825
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.834375,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.825,
+              "123": 0.84375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.3,
+            "mean": 0.834375,
+            "stdev": 0.030935921676911424,
+            "values": {
+              "42": 0.8125,
+              "123": 0.85625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.83125,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.83125,
+              "123": 0.83125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.653125,
+            "stdev": 0.05745242597140694,
+            "values": {
+              "42": 0.69375,
+              "123": 0.6125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.421875,
+            "stdev": 0.15467960838455727,
+            "values": {
+              "42": 0.53125,
+              "123": 0.3125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "medium_0p80",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.196875,
+            "stdev": 0.16351844314938913,
+            "values": {
+              "42": 0.3125,
+              "123": 0.08125
+            },
+            "eligible": false,
+            "drops": 25
+          }
+        ]
+      },
+      "high_0p95": {
+        "selected_phi": 1.0,
+        "selected_psi_a100": 0.4,
+        "calibration_mean_goodput": 0.8125,
+        "calibration_stdev": 0.008838834764831813,
+        "calibration_seeds": [
+          42,
+          123
+        ],
+        "grid": [
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.0,
+            "mean": 0.334375,
+            "stdev": 0.23422912126804385,
+            "values": {
+              "42": 0.5,
+              "123": 0.16875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.2,
+            "mean": 0.70625,
+            "stdev": 0.017677669529663705,
+            "values": {
+              "42": 0.69375,
+              "123": 0.71875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.4,
+            "mean": 0.703125,
+            "stdev": 0.07513009550107064,
+            "values": {
+              "42": 0.75625,
+              "123": 0.65
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.6,
+            "mean": 0.446875,
+            "stdev": 0.05745242597140698,
+            "values": {
+              "42": 0.4875,
+              "123": 0.40625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 0.8,
+            "mean": 0.259375,
+            "stdev": 0.048613591206575144,
+            "values": {
+              "42": 0.29375,
+              "123": 0.225
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.0,
+            "psi_a100": 1.0,
+            "mean": 0.0375,
+            "stdev": 0.008838834764831842,
+            "values": {
+              "42": 0.04375,
+              "123": 0.03125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.0,
+            "mean": 0.3875,
+            "stdev": 0.23864853865045982,
+            "values": {
+              "42": 0.55625,
+              "123": 0.21875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.2,
+            "mean": 0.715625,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.7,
+              "123": 0.73125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.4,
+            "mean": 0.7562500000000001,
+            "stdev": 0.026516504294495518,
+            "values": {
+              "42": 0.775,
+              "123": 0.7375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.6,
+            "mean": 0.47812499999999997,
+            "stdev": 0.04861359120657513,
+            "values": {
+              "42": 0.5125,
+              "123": 0.44375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 0.8,
+            "mean": 0.265625,
+            "stdev": 0.04861359120657513,
+            "values": {
+              "42": 0.3,
+              "123": 0.23125
+            },
+            "eligible": false,
+            "drops": 1
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.2,
+            "psi_a100": 1.0,
+            "mean": 0.04375,
+            "stdev": 0.008838834764831847,
+            "values": {
+              "42": 0.05,
+              "123": 0.0375
+            },
+            "eligible": false,
+            "drops": 1
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.0,
+            "mean": 0.5843750000000001,
+            "stdev": 0.03977475644174332,
+            "values": {
+              "42": 0.6125,
+              "123": 0.55625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.2,
+            "mean": 0.725,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.71875,
+              "123": 0.73125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.4,
+            "mean": 0.778125,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.7875,
+              "123": 0.76875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.6,
+            "mean": 0.48125,
+            "stdev": 0.05303300858899111,
+            "values": {
+              "42": 0.51875,
+              "123": 0.44375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 0.8,
+            "mean": 0.278125,
+            "stdev": 0.06629126073623882,
+            "values": {
+              "42": 0.325,
+              "123": 0.23125
+            },
+            "eligible": false,
+            "drops": 13
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.4,
+            "psi_a100": 1.0,
+            "mean": 0.046875,
+            "stdev": 0.013258252147247768,
+            "values": {
+              "42": 0.05625,
+              "123": 0.0375
+            },
+            "eligible": false,
+            "drops": 19
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.0,
+            "mean": 0.628125,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.64375,
+              "123": 0.6125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.2,
+            "mean": 0.734375,
+            "stdev": 0.013258252147247797,
+            "values": {
+              "42": 0.725,
+              "123": 0.74375
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.4,
+            "mean": 0.78125,
+            "stdev": 0.017677669529663625,
+            "values": {
+              "42": 0.79375,
+              "123": 0.76875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.6,
+            "mean": 0.578125,
+            "stdev": 0.06629126073623882,
+            "values": {
+              "42": 0.625,
+              "123": 0.53125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 0.8,
+            "mean": 0.3125,
+            "stdev": 0.07954951288348663,
+            "values": {
+              "42": 0.36875,
+              "123": 0.25625
+            },
+            "eligible": false,
+            "drops": 14
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.6,
+            "psi_a100": 1.0,
+            "mean": 0.05625,
+            "stdev": 0.008838834764831842,
+            "values": {
+              "42": 0.0625,
+              "123": 0.05
+            },
+            "eligible": false,
+            "drops": 46
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.0,
+            "mean": 0.6625,
+            "stdev": 0.0,
+            "values": {
+              "42": 0.6625,
+              "123": 0.6625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.2,
+            "mean": 0.753125,
+            "stdev": 0.02209708691207961,
+            "values": {
+              "42": 0.7375,
+              "123": 0.76875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.4,
+            "mean": 0.8031250000000001,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.80625,
+              "123": 0.8
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.6,
+            "mean": 0.58125,
+            "stdev": 0.07071067811865474,
+            "values": {
+              "42": 0.63125,
+              "123": 0.53125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 0.8,
+            "mean": 0.371875,
+            "stdev": 0.11048543456039805,
+            "values": {
+              "42": 0.45,
+              "123": 0.29375
+            },
+            "eligible": false,
+            "drops": 7
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.8,
+            "psi_a100": 1.0,
+            "mean": 0.09375,
+            "stdev": 0.04419417382415922,
+            "values": {
+              "42": 0.125,
+              "123": 0.0625
+            },
+            "eligible": false,
+            "drops": 60
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.9,
+            "psi_a100": 0.3,
+            "mean": 0.796875,
+            "stdev": 0.030935921676911424,
+            "values": {
+              "42": 0.775,
+              "123": 0.81875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.9,
+            "psi_a100": 0.4,
+            "mean": 0.809375,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.81875,
+              "123": 0.8
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 0.9,
+            "psi_a100": 0.5,
+            "mean": 0.80625,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.8,
+              "123": 0.8125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.0,
+            "mean": 0.690625,
+            "stdev": 0.004419417382415906,
+            "values": {
+              "42": 0.69375,
+              "123": 0.6875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.2,
+            "mean": 0.7875000000000001,
+            "stdev": 0.026516504294495518,
+            "values": {
+              "42": 0.76875,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.3,
+            "mean": 0.8125,
+            "stdev": 0.026516504294495594,
+            "values": {
+              "42": 0.79375,
+              "123": 0.83125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.4,
+            "mean": 0.8125,
+            "stdev": 0.008838834764831813,
+            "values": {
+              "42": 0.81875,
+              "123": 0.80625
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.5,
+            "mean": 0.809375,
+            "stdev": 0.013258252147247719,
+            "values": {
+              "42": 0.8,
+              "123": 0.81875
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.6,
+            "mean": 0.5875,
+            "stdev": 0.07954951288348663,
+            "values": {
+              "42": 0.64375,
+              "123": 0.53125
+            },
+            "eligible": true,
+            "drops": 0
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 0.8,
+            "mean": 0.371875,
+            "stdev": 0.11048543456039805,
+            "values": {
+              "42": 0.45,
+              "123": 0.29375
+            },
+            "eligible": false,
+            "drops": 8
+          },
+          {
+            "hardware": "h100_a100_realistic",
+            "workload": "deep_research",
+            "rate_label": "high_0p95",
+            "phi": 1.0,
+            "psi_a100": 1.0,
+            "mean": 0.12187500000000001,
+            "stdev": 0.06629126073623884,
+            "values": {
+              "42": 0.16875,
+              "123": 0.075
+            },
+            "eligible": false,
+            "drops": 56
+          }
+        ]
+      }
+    }
+  }
+}
