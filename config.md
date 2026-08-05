@@ -8,6 +8,10 @@ Every value below is traced to the campaign source. Values marked **CONFIRM** ar
 cluster-specific decisions the simulation did not fix — set them to match your
 hardware before bootstrap.
 
+Known limitations of the policy, the predictor, the metric, and the platform are
+in `LIMITATIONS.md`. This file states what the plugin *needs*; that one states
+what it cannot do. Sections below cross-reference it as `LIMITATIONS §x`.
+
 ## vLLM Pod Configuration
 
 | Parameter | Value | Notes |
@@ -162,17 +166,115 @@ Source: `run_public_workload_heterogeneity_closeout.py:53-105`. The public
 catalog supplies TTFT and ITL; E2E is declared as
 `TTFT + mean_output_tokens × ITL`.
 
-| Workload | τ_TTFT | τ_ITL (mean) | τ_E2E | saturating rate (sim) | eval requests (sim) |
-|---|---:|---:|---:|---:|---:|
-| interactive | 1,000 ms | 50 ms | 16 s | 40 rps | 300 |
-| reasoning | 2,000 ms | 100 ms | 802 s | 4 rps | 160 |
-| deep_research | 10,000 ms | 100 ms | 40 s | 8 rps | 160 |
+| Workload | τ_TTFT | τ_ITL (mean) | τ_E2E | N̂_out (mean out tok) | saturating rate (sim) | eval requests (sim) |
+|---|---:|---:|---:|---:|---:|---:|
+| interactive | 1,000 ms | 50 ms | 16 s | 300 | 40 rps | 300 |
+| reasoning | 2,000 ms | 100 ms | 802 s | 8,000 | 4 rps | 160 |
+| deep_research | 10,000 ms | 100 ms | 40 s | 300 | 8 rps | 160 |
+
+The `N̂_out` column is not decoration — it is a **required policy parameter**, not
+just the constant used to derive τ_E2E. See
+[Output-length priors](#output-length-priors-n̂_out) below.
 
 **Goodput is a per-request hard conjunction**: a request is good only if TTFT ≤
 τ_TTFT **and** mean ITL ≤ τ_ITL **and** E2E ≤ τ_E2E. Composite goodput is the
 fraction of injected requests that are good; a shed request counts as not good.
 Computing this on the real side requires per-chunk timestamps — hence
 `--record-itl` is mandatory in the observe block below, not optional.
+
+### Two flag families, one table — only one is plugin config
+
+The campaign feeds this single table to two different consumers
+(`run_public_workload_heterogeneity_closeout.py:323-324`):
+
+| | flags | consumer | belongs in |
+|---|---|---|---|
+| policy targets | `--edpp-tau-ttft` / `-itl` / `-e2e` | the **policy**, inside its score | **EPP plugin `parameters`** |
+| goodput targets | `--slo-ttft` / `-itl` / `-e2e` | the **measurement harness** | analysis / `blis calibrate --slo-*` |
+
+They are given identical values but are independent knobs. Do not put the goodput
+targets in the plugin config, and do not assume changing one changes the other.
+
+The two are also **not the same conjunction**. The policy's routing value is
+TTFT × E2E only — mean ITL was deliberately removed
+(`PUBLIC-LOAD-STATIC-BENCHMARK-PROTOCOL.md`: *"after mean ITL was removed from its
+routing value"*) — while reported goodput keeps all three. τ_ITL still reaches the
+plugin, but for the admission estimator's normalizers (`μ_nom = 1 − α/τ_ITL`), not
+as a scoring conjunct. `LIMITATIONS §B2`.
+
+### τ_ITL has a hardware floor
+
+`μ_nom = 1 − α/τ_ITL` requires `τ_ITL > α`. With A100 α = 25,563 µs ≈ 25.6 ms,
+**no SLO class may declare τ_ITL below ~26 ms on this fleet.** Interactive's 50 ms
+has under 2× margin. Validate this when authoring any new class; the config guard
+will reject violations. `LIMITATIONS §E7`.
+
+### Output-length priors (N̂_out)
+
+`Wd(a_r, o)` needs a predicted output length `o`, and every resident's remaining
+decode steps come from `nHatFor(r.SLOClass).mean()` — a **per-class** prior. This
+is a required plugin parameter that is easy to miss because the campaign never
+varied it.
+
+```yaml
+      nOutByClass:
+        interactive:   300      # gaussian mean, interactive-chat-single-turn.yaml
+        reasoning:     8000     # lognormal mean, reasoning-single-turn.yaml
+        deepresearch:  300      # gaussian mean, deep-research-single-turn.yaml
+      defaultNOut: 300          # used for unclassified traffic — see below
+```
+
+It must be a **censored per-class estimate, never the true output length** —
+reading the true value makes the arm an oracle and invalidates it.
+
+Two consequences to be aware of before trusting results, both in `LIMITATIONS`:
+residents that outlive their class prior are permanently treated as one step from
+done (`§C5`), and τ_E2E derived at the mean makes ~50% of requests structurally
+infeasible at nominal ITL (`§B1`).
+
+## Request classification
+
+The plugin resolves τ and N̂_out **per request** via `targetsFor(class)` /
+`nHatFor(class)`. This is how mixed traffic is meant to work: configure all
+classes once, and let each request declare its own.
+
+The campaign did **not** use this. All three workloads declare
+`slo_class: standard` and the runner reconfigures the single default τ triple per
+run. So the per-class path is real and correct by inspection but has zero
+empirical validation (`LIMITATIONS §D1`).
+
+**CONFIRM — pick one before bootstrap:**
+
+1. **Per-workload configs (campaign-faithful).** One EPP config per (arm,
+   workload); each declares a single class. 5 arms × 3 workloads = 15 manifest
+   entries, 4 images. Reproduces the frozen protocol exactly. Not deployable —
+   the EPP must be redeployed to change workload.
+2. **Per-class config (deployable).** One config per arm declaring all three
+   classes; requests carry a class tag. 5 entries. This is the design that answers
+   "how does the EPP know the workload" — it doesn't need to. But it runs an
+   unvalidated path and makes the result non-comparable to the frozen numbers
+   without re-running the sim side the same way.
+
+Recommendation: **(1) for the reproduction, (2) as a follow-on campaign** with its
+own protocol (`LIMITATIONS §D2`).
+
+If (2): the class tag needs a carrier. `InferenceObjective` **cannot** be it —
+`InferenceObjectiveSpec` has only `Priority *int32` and `PoolRef`
+(`apix/v1alpha2/inferenceobjective_types.go:58`). A request header plus a data
+producer is the shape (`predictive_routing` used `session-id-producer` with
+`headerName: x-session-id` for the analogous problem). **TRANSLATE — unresolved:**
+(a) whether a producer exists for an arbitrary header on the pinned checkout, and
+(b) whether `blis observe` can inject a per-workload header. The workload specs
+already carry distinct `tenant_id` values (`interactive-users`, `reasoning-jobs`,
+`research-agents`) where `slo_class` is uniform, so if `tenant_id` propagates as a
+header the discriminator is free.
+
+**Unclassified traffic must not silently default.** `targetsFor` falls back to
+`cfg.TauTTFTUs` with no error and no warning, and so does `nHatFor`. An untagged
+reasoning request treated as interactive gets a 16 s deadline and a 300-token work
+estimate against a real 8,000-token generation — `Wd` underestimates by ~26×. The
+plugin **must reject or loudly log** an unknown class rather than defaulting.
+`LIMITATIONS §C4`.
 
 The simulator additionally disables the request timeout for these campaigns
 (`run_public_load_static_benchmark.py:59` sets `REQUEST_TIMEOUT_SECS = -1`) so a
@@ -265,10 +367,25 @@ plugins:
     parameters:
       V: 8.0                       # --edpp-v 8 (closeout runner V = 8.0)
       kernel: composite            # varKernelComposite: sigmoid TTFT x E2E value
-      # Per-SLO-class targets, µs. Interactive shown; one config per workload.
+      # SLO targets, µs. Resolved PER REQUEST via targetsFor(class) — see
+      # "Request classification". Option (1) declares one class per config;
+      # option (2) declares all three here. Interactive shown.
+      #
+      # Scalars are the DEFAULT (cfg.TauTTFTUs), used when a request's class is
+      # absent from sloClasses. Under option (1) that is the intended path; under
+      # option (2) hitting the default means an unclassified request — reject it,
+      # do not serve it silently (LIMITATIONS §C4).
       tauTtftUs: 1000000
-      tauItlUs: 50000
+      tauItlUs: 50000              # MUST exceed A100 alpha = 25563 us (§E7)
       tauE2eUs: 16000000
+      sloClasses:                  # --edpp-tau-{ttft,itl,e2e}-classes
+        interactive:  {tauTtftUs: 1000000, tauItlUs: 50000,  tauE2eUs: 16000000}
+      # Per-class predicted output length. REQUIRED — feeds Wd(a_r, o) and every
+      # resident's remaining-steps estimate. See "Output-length priors".
+      nOutByClass:
+        interactive: 300
+      defaultNOut: 300
+      rejectUnknownClass: true     # do not fall back silently (§C4)
       # Ablation switches (see the ablation arm below). All false in the focal arm.
       noExternality: false         # --edpp-slo-externality-no-externality
       noOwnGood: false             # --edpp-slo-externality-no-own-good
@@ -330,10 +447,22 @@ projected TTFT. No externality, no capacity, no drift.
     parameters:
       # identical rollout/coeffs/chunk/block/xfer block as causalext, plus:
       overlapAware: true           # --edpp-ttft-overlap-aware
-      # tau targets are still needed for the admission estimator's remaining-steps model
+      # tau and nOut are still needed even though the objective does not use an
+      # SLO value: the admission estimator's normalizers are tau-derived and its
+      # remaining-steps model is nOut-derived. Dropping them changes the rollout
+      # and breaks the like-for-like comparison with causalext.
       tauTtftUs: 1000000
       tauItlUs: 50000
+      sloClasses:   { interactive: {tauTtftUs: 1000000, tauItlUs: 50000} }
+      nOutByClass:  { interactive: 300 }
+      defaultNOut: 300
+      rejectUnknownClass: true
 ```
+
+The projected TTFT arithmetic must be **bit-identical** to `causalext`'s
+`tHatLocal`/`tHatDisagg` (BLIS asserts this as INV-6). That identity is what makes
+the paired delta attributable to the externality term alone, so the two arms must
+share one implementation and one parameter block rather than two copies.
 
 ## llm-d EPP Configuration — comparator arm (`kairos`)
 
@@ -351,8 +480,18 @@ resident TBT, rather than choosing among prefill instances.
                                    # kairosPaperChunkCandidates in sim/edpp_kairos.go
       chunkCap: 2048               # = vLLM --max-num-batched-tokens
       tauTtftUs: 1000000           # the arriving request's TTFT gate
+      # Resident TBT targets. Kairos takes the STRICTEST among a decode node's
+      # current residents, NOT the arriving request's class — the constraint
+      # protects incumbents. Under mixed classes this makes Kairos
+      # conservative-minimax where causalext is value-maximizing, which confounds
+      # the comparison (LIMITATIONS §D4).
+      tauItlUsByClass: { interactive: 50000 }
+      defaultTauItlUs: 50000
       coeffs: { ... }              # same per-GPU block as causalext
 ```
+
+Kairos needs no `nOutByClass`: Algorithm 1 reasons only about the prompt, never
+about output length.
 
 ## llm-d EPP Configuration — ablation arm (`causalextnoext`)
 
@@ -425,6 +564,39 @@ Reproduces the campaign's simulator side. From `topology_args()`,
 | `--slo-ttft` / `--slo-itl` / `--slo-e2e` | per workload | goodput accounting, separate from the policy's τ |
 | `--timeout` | -1 | disabled; see SLO section |
 | `--edpp-joint-candidate-trace` | path | per-candidate score trace; enables the argmin identity check |
+
+## Sim-vs-real comparison
+
+`blis calibrate` compares a real run against the simulator on the same workload.
+It cannot fit the coefficients (`LIMITATIONS §A6`) but it is the instrument that
+can **falsify** them: large TTFT/E2E MAPE means the frozen coefficients do not
+describe this cluster.
+
+```bash
+blis calibrate \
+  --trace-header <observe>/trace_header.yaml \
+  --trace-data   <observe>/trace_data.csv \
+  --itl-data     <observe>/itl.csv \
+  --sim-results  <replay>/results.json \
+  --slo-ttft standard=1000ms \
+  --slo-itl  standard=50ms \
+  --slo-e2e  standard=16000ms \
+  --report calibration.json
+```
+
+With `--itl-data` present and all three `--slo-*` set to the workload's targets,
+the report carries **real-vs-simulated goodput on the study's own headline
+metric**, per cell — turning the comparison into one number rather than a
+hand-reading of two reports.
+
+Two cautions:
+
+- It requires a `blis replay` step (replaying the observed trace through the
+  simulator) to produce `--sim-results`. **Unverified** whether the sim2real
+  pipeline runs one; check before relying on this.
+- `--slo-itl` is *silently skipped with a warning* when ITL data is missing on
+  either side. A misconfigured run then reports two-way goodput and looks better
+  than it is. Assert the ITL conjunct is present in every report.
 
 ## Seeds
 

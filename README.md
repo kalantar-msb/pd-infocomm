@@ -141,12 +141,19 @@ reduces to the homogeneous control, where simulation predicts no win.
 - The **topology sweep** and **mixed-burst stress** campaigns
   (`sim_results/topology/`, `sim_results/stress/`) — vendored for reference,
   not transferred in this round.
+- **Mixed concurrent SLO classes.** The policy supports them per request and they
+  are arguably where the externality term should shine — with one uniform class it
+  degenerates toward a load count. But all 432 confirmation runs used a single
+  class, so it is an unvalidated path needing its own protocol, capacity
+  selection, and held-out seeds. A follow-on campaign, not this reproduction.
+  `LIMITATIONS §D1-D4`.
 
 ## Layout
 
 ```
-README.md          # this file
-config.md          # vLLM/EPP/SLO/observe/sim-flag tables; the bootstrap input
+README.md          # this file — scope, arms, provenance
+config.md          # what the plugin needs: vLLM/EPP/SLO/observe/sim-flag tables
+LIMITATIONS.md     # what it cannot do: predictor, metric, signals, platform
 algorithms/
   causal_slo_externality.go   # focal — joint argmin, // TRANSLATE: markers
   least_ttft_joint.go         # comparator — same rollout, TTFT objective
@@ -168,8 +175,12 @@ sim_results/       # vendored results/infocom-2027/ + CHECKSUMS (sim ground trut
 ## Next steps
 
 1. Resolve the **CONFIRM** rows in `config.md` (GPU labels, replica counts, the
-   mixed-decode-pool question).
+   mixed-decode-pool question, per-workload vs per-class configuration).
 2. Decide the heterogeneous-decode-pool approach — this gates everything.
+2b. Read `LIMITATIONS.md`. Three items are cheap to close before any cluster time
+   and each removes a reviewer objection: validate the A100 coefficients for
+   additivity (`§A4`), add the `rem = 1` counter (`§C5`), and run the
+   hardware-blind control arm (`§A5`).
 3. From the sim2real repo: `/sim2real-bootstrap <path-to-this-folder>`.
 4. `/sim2real-translate`, then `sim2real translate --resume`.
 5. Capacity probe on the real fleet to establish `C_w` per workload/fleet, then
@@ -200,9 +211,18 @@ pinned checkout. The touchpoints, hardest first:
 4. **Per-pod GPU type**, to select coefficients per candidate. Node label
    `nvidia.com/gpu.product` → endpoint attribute. Required for the
    heterogeneous arm; see [Scope](#scope).
-5. **`N̂_out` (predicted output length)**, needed by `W_d` and by every resident's
-   remaining-steps estimate. The sim uses a censored per-class mean; there is no
-   oracle read. Keep it censored — reading true output length invalidates the arm.
+5. **`N̂_out` (predicted output length)** — a **per-class configured table**, not a
+   scalar. `Wd(a_r, o)` needs it for the arrival and `nHatFor(r.SLOClass).mean()`
+   needs it for every resident's remaining-steps estimate. Keep it censored —
+   reading true output length invalidates the arm. See `config.md`
+   §"Output-length priors"; note the `rem = 1` pinning in `LIMITATIONS §C5`.
+
+5b. **Per-request SLO class.** τ and `N̂_out` are both resolved per request via
+   `targetsFor(class)` / `nHatFor(class)`. `InferenceObjective` cannot carry the
+   class (it has only `Priority` and `PoolRef`), so a header plus a data producer
+   is the shape — both unresolved on the pinned checkout. The plugin must
+   **reject** an unknown class rather than silently defaulting. See `config.md`
+   §"Request classification".
 6. **KV transfer cost** `c_xfer`, size-aware (`--edpp-c-xfer-size-aware`). Must
    be measured on the target interconnect, not inherited.
 7. **Single EPP replica** for the first experiment. The shadow resident table is
