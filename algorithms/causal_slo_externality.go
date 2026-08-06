@@ -332,7 +332,16 @@ func kvTokensFor(m *metricsView, residents []*resident) int64 {
 		return shadow
 	}
 	if m != nil && m.KvCacheMaxTokenCapacity > 0 {
-		return int64(m.KVCacheUsagePercent / 100.0 * float64(m.KvCacheMaxTokenCapacity))
+		// UNITS: KVCacheUsagePercent is a FRACTION in [0,1], not a percentage,
+		// despite the name — do NOT divide by 100. vLLM documents the gauge as
+		// "KV-cache usage. 1 means 100 percent usage" (vllm/v1/metrics/loggers.go:563
+		// -> loggers.py:563); llm-d-router passes it through unscaled
+		// (extractor.go:127), scores 1 - KVCacheUsagePercent
+		// (kvcache_utilization.go:79), and validates its own utilization threshold
+		// to (0,1] with a 0.8 default (utilization/config.go:33,153).
+		// NOTE docs/transfer/blis_to_llmd_mapping.md in the sim2real pipeline repo
+		// states the opposite and mandates /100 — it is wrong; see sim2real#816.
+		return int64(m.KVCacheUsagePercent * float64(m.KvCacheMaxTokenCapacity))
 	}
 	return 0
 }
@@ -443,24 +452,45 @@ func (h *Handler) projectedDisaggTTFT(decodeJoinUs, tIterFirstDecode float64) fl
 // ─── The externality term ────────────────────────────────────────────────────
 
 // reTiming holds the batch-level per-iteration decode times the completion model
-// needs. Every co-resident in one decode batch shares one per-iteration time, so
-// these are batch-level, not per-resident.
+// needs, plus the prefill-attention parameters the overlap window charges. Every
+// co-resident in one decode batch shares one per-iteration time, so the timings
+// are batch-level, not per-resident.
 //
 //	tIter0:       current batch B time — the baseline
-//	tIterOverlap: while the arrival prefills co-scheduled on the decode batch
+//	tIterOverlap: while the arrival prefills co-scheduled on the decode batch.
+//	              RETAINED FOR REFERENCE ONLY — unused under the exact overlap
+//	              model the focal arm forces (see cLocalAfter).
 //	tIterAfter:   after the arrival joins the batch — FULL B+1 re-timing, i.e.
 //	              recompute tIterDecode(B+1, KV+Δkv, S_pf), not a marginal add
+//
+// cPf/cAttn/ap/ar/chunk parameterize the CAUSAL PREFILL-ATTENTION charge that the
+// arrival's co-scheduled chunks impose on every decode co-resident. This is the
+// paper's causal prefill-attention model (INFOCOM_REPRODUCIBILITY.md names it as a
+// retained contribution) and it is load-bearing: it is quadratic in the processed
+// prefill span, so on long prompts it dominates the local-placement charge.
 type reTiming struct {
 	tIter0       float64
 	tIterOverlap float64
 	tIterAfter   float64
+
+	cPf   float64
+	cAttn float64
+	ap    float64 // uncached suffix tokens
+	ar    float64 // full prompt length
+	chunk float64 // per-step prefill token budget, = min(ap, ChunkTokens)
 }
 
-func (h *Handler) reTimingFor(c Coeffs, st instState, arrivalInputLen int, chunk float64) reTiming {
+func (h *Handler) reTimingFor(c Coeffs, st instState, arrivalInputLen, ap int) reTiming {
+	chunk := float64(h.chunkTokens(ap))
 	return reTiming{
 		tIter0:       c.tIterDecode(st.BDec, st.KV, st.SPf),
 		tIterOverlap: c.tIterDecode(st.BDec, st.KV, st.SPf+int64(chunk)),
 		tIterAfter:   c.tIterDecode(st.BDec+1, st.KV+int64(arrivalInputLen), st.SPf),
+		cPf:          c.CPf,
+		cAttn:        c.CAttn,
+		ap:           float64(maxInt(ap, 0)),
+		ar:           float64(arrivalInputLen),
+		chunk:        chunk,
 	}
 }
 
@@ -475,12 +505,38 @@ func (rt reTiming) cBase(nowUs float64, rem int64) float64 {
 // first run min(admissionSteps, rem) iterations undisturbed; of the surviving
 // tail, the first min(nChunks, remaining) iterations overlap the arrival's
 // prefill and the rest run at the B+1 re-timed rate.
+//
+// The overlap window runs at the BASELINE tIter0 plus the arrival's exact marginal
+// prefill work — NOT at tIterOverlap. This is the "exact prefill overlap" form,
+// which the focal arm forces unconditionally on both the local and disagg paths
+// (sim/edpp.go:1707 and :1748 set VarExactPrefillOverlap = true), so the legacy
+// tIterOverlap + c_attn·chunk²·overlap²/2 branch in sim/edpp_var.go:155-157 is
+// unreachable for this policy and is deliberately not ported.
 func (rt reTiming) cLocalAfter(nowUs float64, rem int64, admissionSteps, nChunks float64) float64 {
 	pre := math.Min(math.Max(admissionSteps, 0), float64(rem))
-	tail := float64(rem) - pre
-	overlap := math.Min(math.Max(nChunks, 0), tail)
-	after := tail - overlap
-	return nowUs + pre*rt.tIter0 + overlap*rt.tIterOverlap + after*rt.tIterAfter
+	remaining := float64(rem) - pre
+	overlap := math.Min(math.Max(nChunks, 0), remaining)
+	return nowUs + pre*rt.tIter0 + overlap*rt.tIter0 +
+		prefillMarginalWork(rt.cPf, rt.cAttn, rt.ap, rt.ar, rt.chunk, overlap) +
+		(remaining-overlap)*rt.tIterAfter
+}
+
+// prefillMarginalWork is the exact E3 work (µs) added by the first `iterations`
+// chunks of the arrival's uncached prefill, ported verbatim from
+// sim/edpp_var.go:168. The known cached prefix is ar−ap, processed =
+// min(ap, iterations·chunk), and the integrated causal charge is
+//
+//	CPf·processed + CAttn·processed·(cachedPrefix + processed/2)
+//
+// It EXCLUDES baseline iteration time — co-residents would pay that even if the
+// arrival were absent, which is why cLocalAfter charges overlap·tIter0 separately.
+func prefillMarginalWork(cPf, cAttn, ap, ar, chunk, iterations float64) float64 {
+	if ap <= 0 || chunk <= 0 || iterations <= 0 {
+		return 0
+	}
+	processed := math.Min(ap, iterations*chunk)
+	cachedPrefix := math.Max(ar-ap, 0)
+	return cPf*processed + cAttn*processed*(cachedPrefix+processed/2.0)
 }
 
 // cDisagg is the DISAGG mirror: the arrival prefills elsewhere and joins the
@@ -497,6 +553,19 @@ func (rt reTiming) cDisagg(nowUs float64, rem int64, arrivalSteps float64) float
 // A resident whose remaining steps are unknown (rem < 0) contributes zero, never
 // a guess — matching BLIS's censoring. Its realized TTFT is exact (the EPP saw
 // the first token), so only the E2E conjunct moves.
+//
+// DEVIATION: BLIS's externality is a THREE-way breakdown — varPathBreakdown{decode,
+// collocPrefill, prefillPool} (sim/edpp_var.go:~683) — and the focal arm enables all
+// three (varCollocPrefill = true at sim/edpp.go:1708,1749). This port returns only
+// the DECODE component:
+//   - collocPrefill (occupants mid-prefill ON the decode node, whose first token this
+//     placement delays) needs ds.RunningPrefill, which has no real signal — same root
+//     cause as sPfFor. On a clean 1P2D fleet decode pods run no prefill and the term is
+//     genuinely 0, but it is NOT 0 whenever this policy picks local prefill.
+//   - prefillPool: see the note in Score's disagg branch.
+//
+// Both omissions under-price contention, so the argmin is biased toward whichever
+// candidate carries more unpriced prefill work. Quantify before trusting the split.
 func (h *Handler) externality(nowUs float64, residents []*resident, rt reTiming, admissionSteps, nChunks float64, disagg bool) float64 {
 	var sum float64
 	for _, r := range residents {
@@ -559,12 +628,14 @@ func (h *Handler) Score(nowUs float64, req *arrival, d instState, p *instState) 
 	if p == nil {
 		// ── LOCAL: prefill and decode co-resident on d ──
 		ap := req.UncachedSuffixTokens // TRANSLATE: from the prefix-cache match info
-		nChunks, chunk := h.chunkTerms(ap)
+		nChunks, _ := h.chunkTerms(ap)
 		wpLocal := thetaD.wp(maxInt(ap, 0), req.InputLen)
 		tHat := h.projectedLocalTTFT(tAdmD, nChunks, tIterD, wpLocal)
 
-		rt := h.reTimingFor(thetaD, d, req.InputLen, chunk)
-		admissionSteps := tAdmD / math.Max(tIterD, 1)
+		rt := h.reTimingFor(thetaD, d, req.InputLen, ap)
+		// Ceil: admission happens on an iteration boundary, so the wait is a WHOLE
+		// number of baseline decode steps (sim/edpp_var.go:865).
+		admissionSteps := math.Ceil(tAdmD / math.Max(rt.tIter0, 1))
 		sc.Externality = h.externality(nowUs, residents, rt, admissionSteps, nChunks, false)
 		sc.OwnGood = goodSelf(slo, tHat, rt.tIterAfter, req.NOutEstimate)
 	} else {
@@ -572,7 +643,7 @@ func (h *Handler) Score(nowUs float64, req *arrival, d instState, p *instState) 
 		sc.PrefillKey = p.Key
 		thetaP := h.coeffsFor(p.GPUType) // p's OWN physics, not d's
 		ap := req.UncachedSuffixTokens
-		nChunksP, chunk := h.chunkTerms(ap)
+		nChunksP, _ := h.chunkTerms(ap)
 		wpP := thetaP.wp(maxInt(ap, 0), req.InputLen)
 		tIterP := thetaP.tIterPrefill(p.SPf)
 		tAdmP := h.tAdm(*p, thetaP, h.residents.snapshot(p.Key))
@@ -585,8 +656,8 @@ func (h *Handler) Score(nowUs float64, req *arrival, d instState, p *instState) 
 		decodeJoinUs := math.Max(remoteLeadUs, tAdmD)
 		tHat := h.projectedDisaggTTFT(decodeJoinUs, tIterFirstDecode)
 
-		rt := h.reTimingFor(thetaD, d, req.InputLen, chunk)
-		arrivalSteps := decodeJoinUs / math.Max(tIterD, 1)
+		rt := h.reTimingFor(thetaD, d, req.InputLen, ap)
+		arrivalSteps := math.Ceil(decodeJoinUs / math.Max(rt.tIter0, 1))
 		sc.Externality = h.externality(nowUs, residents, rt, arrivalSteps, 0, true)
 		// DEVIATION: BLIS also prices the externality imposed on PREFILL-POOL
 		// co-residents (varPrefillDisagg). That term needs S_pf on the prefill
@@ -709,13 +780,31 @@ func (h *Handler) sloFor(class string) SLO {
 	return h.params.SLO
 }
 
+// chunkTokens is the per-step prefill token budget actually used for an uncached
+// suffix of ap tokens: min(ap, --max-num-batched-tokens).
+//
+// NOT simply ChunkTokens. A prompt shorter than the engine budget is prefilled in
+// ONE chunk of ap tokens, so charging the full budget over-states the co-scheduled
+// prefill span. BLIS recomputes this at every call site — sim/edpp.go chunkTerms,
+// and "chunkLoc"/"chunkP" in sim/edpp_var.go varJointCandidateBreakdownCore.
+func (h *Handler) chunkTokens(ap int) int {
+	if ap <= 0 {
+		return 0
+	}
+	if h.params.ChunkTokens > 0 && h.params.ChunkTokens < ap {
+		return h.params.ChunkTokens
+	}
+	return ap
+}
+
 // chunkTerms returns (number of prefill chunks, tokens per chunk) for an
 // uncached suffix of ap tokens under the engine's chunk budget.
 func (h *Handler) chunkTerms(ap int) (nChunks, chunk float64) {
-	if h.params.ChunkTokens <= 0 || ap <= 0 {
+	c := h.chunkTokens(ap)
+	if c <= 0 {
 		return 0, 0
 	}
-	chunk = float64(h.params.ChunkTokens)
+	chunk = float64(c)
 	nChunks = math.Ceil(float64(ap) / chunk)
 	return nChunks, chunk
 }
