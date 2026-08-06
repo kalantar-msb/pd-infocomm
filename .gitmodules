@@ -1,0 +1,6 @@
+[submodule "llm-d-router"]
+	path = llm-d-router
+	url = https://github.com/llm-d/llm-d-router.git
+[submodule "vllm"]
+	path = vllm
+	url = https://github.com/vllm-project/vllm.git
