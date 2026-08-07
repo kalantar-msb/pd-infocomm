@@ -30,19 +30,45 @@ GPU type that selects which coefficient set to use.
 
 | BLIS signal | What it is | Why the algorithm needs it | llm-d mapping | Status |
 |---|---|---|---|---|
-| `BatchSize` (`B_dec`) | count of running requests on the instance | linear term in iteration time: more concurrent requests, slower steps | `Metrics.RunningRequestsSize` <- `vllm:num_requests_running` | **Direct** |
+| `BatchSize` | count of running requests on the instance, **including those still prefilling** | linear term in iteration time: more concurrent requests, slower steps. Note this is *not* the decode-only `B_dec` of the law above — see below | `Metrics.RunningRequestsSize` <- `vllm:num_requests_running` | **Direct** |
 | `KvTokensInUse` (`KV`) | block-level KV occupancy in tokens (`UsedBlocks × BlockSize`), **not** Σ per-resident context | dominant term — attention cost grows with total context held | `KVCacheUsagePercent * CacheBlockSize * CacheNumBlocks`, or the shadow-table sum | **Derived** (see 5.1) |
 | `ResidentPrefillTokens` (`S_pf`) | tokens being prefilled this step | prefill work stalls decode steps in the same batch | none | **MISSING** (see 5.2) |
-| `GPUType` | e.g. `A100-80GB` vs `H100` | picks the coefficients. **This is the experiment.** A100 `C1`=0.0782 vs H100 0.0476, so the same request costs ~1.6x more on A100 | pod label in the Deployment template, read from `EndpointMetadata.Labels`. The *node* label `nvidia.com/gpu.product` is not visible to plugins | **Config** (see 5.3) |
+| `GPUType` | e.g. `A100-80GB` vs `H100` | picks the coefficients. **This is the experiment.** Pure-decode `T_iter` at B=8, KV=16,384 is 17,437 µs (H100) vs 26,893 µs (A100), ~1.54x. That ratio is carried by the **intercept** (`alpha_d` 16,614 vs 25,564 = 1.539), not by `C1` (0.0476 vs 0.0782), which contributes ~500 µs of the ~9,500 µs gap | pod label in the Deployment template, read from `EndpointMetadata.Labels`. The *node* label `nvidia.com/gpu.product` is not visible to plugins | **Config** (see 5.3) |
 | `QueueDepth` | waiting queue length | how many requests are ahead of the arrival | `Metrics.WaitingQueueSize` <- `vllm:num_requests_waiting` | **Direct** |
 | `BlockSizeTokens`, capacity | KV block size, total blocks | converts occupancy fraction to tokens | `Metrics.CacheBlockSize`, `CacheNumBlocks` <- `vllm:cache_config_info` | **Direct** |
 | `C_pf`, `C_attn` | prefill per-token and causal-attention coefficients | **not** part of `T_iter` above. The focal arm's externality charges the arrival's *trajectory* prefill work on top of the iteration time — `C_pf*processed + C_attn*processed*(cachedPrefix + processed/2)` — so `c_attn_us_per_unit` is load-bearing, not decorative | `inputs/coeffs-*.json`, per GPU type | **Config** |
 | chunk budget | per-step prefill token budget | sets `nChunks` for the TTFT projection and `chunk = min(a_p, budget)` for the charge above. Must equal the engine's real value or the overlap window is mispriced | plugin config, = vLLM `--max-num-batched-tokens` | **Config** |
 
-Definitions confirmed to match: BLIS's `BatchSize` is `len(RunningBatch.Requests)`
-including requests still prefilling (`sim/simulator.go:699`); vLLM's
-`num_requests_running` is `len(self.running)` (`scheduler.py:2431`). Same
-definition, no correction needed.
+**Definitions confirmed to match on the consume side.** BLIS's `BatchSize` is
+`len(RunningBatch.Requests)` including requests still prefilling
+(`sim/simulator.go:699`); vLLM's `num_requests_running` is `len(self.running)`
+(`scheduler.py:2431`). Same definition, so the mapping needs no correction.
+
+**But that pair is not what `C0` was fitted against, and the symbol name is
+wrong.** The calibration tap records `b_dec` and `batch_size` as *separate* CSV
+columns (`sim/simulator.go:1224-1244`, `sim/step_recorder.go:22`), classifying
+`ProgressIndex < InputLen` as prefilling and counting `b_dec` only in the
+`else if len(req.OutputTokens) > 0` branch. `scripts/calibration/fit_coeffs.py:82`
+then fits `C0` against the **decode-only** `b_dec`; `batch_size` is recorded and
+never used as a regressor. The policy meanwhile consumes `ds.BatchSize`, the
+running total (`sim/simulator.go:632`, `sim/edpp_kairos.go:329`).
+
+So BLIS fits `C0` on one definition and consumes it against another — the same
+fit/consume split documented for `KV` in §5.1, and we inherit it. Two reasons it
+does not warrant action:
+
+- **The fit is clean.** `fit_decode` selects rows with `s_pf == 0`, where no
+  prefilling requests exist and the two definitions coincide. The mismatch appears
+  only when `C0` is extrapolated to mixed steps at decision time.
+- **The term is negligible.** `C0` is 5.35 µs/req (H100) and 5.95 (A100), so
+  wrongly counting four prefilling requests costs ~21 µs against a 17,000-27,000 µs
+  iteration — under 0.1%. A prefilling request is double-charged (through `C0·B` and
+  again through `C_pf·S_pf`), but unmeasurably so.
+
+**Do not write `B_dec` for this signal**, and do not write it for
+`num_generation_requests` either (§5.2) — those are different quantities and
+conflating them would corrupt any refit. Preserve BLIS's running-total behavior and
+name it `BatchSize`.
 
 ---
 
@@ -62,17 +88,39 @@ per-request, and vLLM exports only aggregates.
 |---|---|---|---|---|
 | `RunningReqState.StepsDone` | output tokens the resident has produced | with `N_out`, gives remaining steps -> when it finishes | count streaming chunks; `Response.Usage.CompletionTokens` | **Shadow** (see 5.4) |
 | `RunningReqState.ArrivalUs` | when the resident arrived | its E2E deadline is `arrival + tau_e2e` | EPP clock at `PreRequest` | **Shadow** |
-| `RunningReqState.FirstTokenUs`, `TTFTSet` | whether it has produced its first token | decides TTFT-side vs ITL-side risk: a resident past first token can no longer miss TTFT | `ResponseHeader` hook / `StartOfStream` | **Shadow** |
+| `RunningReqState.FirstTokenUs`, `TTFTSet` | whether it has produced its first token | decides TTFT-side vs ITL-side risk: a resident past first token can no longer miss TTFT | first `ResponseBody` invocation — `StartOfStream`, or `Usage.CompletionTokens >= 1`. **Not `ResponseHeader`** (see 5.4) | **Shadow** |
 | `RunningReqState.SLOClass` | its SLO class | resolves its `tau_ttft`/`tau_itl`/`tau_e2e` | inert under single-class; otherwise `req.Headers[x-…-inference-objective]`, no data producer needed | **Not needed** (see 5.5) |
 | `RunningReqState.KVBlocks` | its KV footprint | admission estimate: how much KV frees when it leaves | `ceil(context / CacheBlockSize)` from shadow table | **Derived** |
 | resident remaining prefill tokens | prompt tokens left to prefill | prefill-pool contention term, per occupant | `promptTokens - tokensPrefilled` from shadow table | **Shadow** |
 | same, on the **decode** node (`RunningPrefill`) | occupants mid-prefill where the arrival would decode | BLIS's externality has **three** populations — `decode`, `collocPrefill`, `prefillPool` — and the focal arm enables all three (`varCollocPrefill = true`, `sim/edpp.go:1708,1749`). `collocPrefill` prices the first-token delay this placement inflicts on occupants already prefilling on the decode node. Genuinely 0 on a clean 1P2D, but **not** when the policy elects local prefill | none — same root cause as `S_pf` | **MISSING** (5.2) |
 | `N_out` per class | mean output length, running mean over completions | the arrival's decode demand `Wd`, and each resident's remaining steps | EPP maintains the same running mean | **Derived** |
-| `a_p` uncached suffix | prompt tokens not already cached on that endpoint | prefill work `Wp` — a cached prefix is free | `PrefixCacheMatchInfo`: `(TotalBlocks - MatchBlocks) * BlockSizeTokens` | **Direct** (block granular) |
+| `a_p` uncached suffix | prompt tokens not already cached on that endpoint | prefill work `Wp` — a cached prefix is free | `PrefixCacheMatchInfo`, **per candidate endpoint**: `(TotalBlocks() - CachedBlockCount()) * BlockSizeTokens()`. **Not `MatchBlocks()`** — see below | **Direct** (block granular) |
 | `tau_ttft`, `tau_itl`, `tau_e2e` | per-class SLO targets | the deadlines in `g()` | plugin config | **Config** |
 | `c_xfer` | KV transfer cost, remote prefill | price of disaggregating | must be measured on the target interconnect | **Config, unmeasured** |
 | ~~SLO virtual queues `z_TTFT`, `z_ITL`~~ | accumulated violation per class | **not used by this arm** — `jointSLOExternalityCandidateScore` has no historical-deficit term; the z-terms belong to the work-currency deciders (`sim/edpp.go:922`, `:1339`) | n/a | **Not needed** (see §6.0) |
 | scheduler-rollout state | **ordered** wait queue with per-request prompt/computed tokens | BLIS replays vLLM's scheduler forward to predict admission and first token | none today; exportable as position-indexed gauges consumed via `customMetrics` | **MISSING** (see 5.6) |
+
+#### `a_p`: use `CachedBlockCount()`, and evaluate it per candidate
+
+Two corrections, both from
+`plugins/datalayer/attribute/prefix/data_types.go:27-41`:
+
+- **`MatchBlocks()` is the wrong accessor.** Under the precise prefix cache it is a
+  *device-tier-weighted* longest-prefix score (RAM-tier blocks count as less than
+  1.0), documented as "suitable for relative endpoint ranking".
+  `cachedBlockCount` is the literal cached-block count, and its own doc comment
+  says it exists so that "consumers that convert blocks to a token count get an
+  accurate cached-token figure rather than a tier-attenuated one." Since weighted
+  `matchBlocks <= cachedBlockCount`, using it **over-estimates** `a_p` and
+  over-prices prefill work. It defaults to `matchBlocks` when unset, so
+  `CachedBlockCount()` is safe either way.
+- **`BlockSizeTokens()` comes from the info object**, not from
+  `Metrics.CacheBlockSize`. The prefix producer carries its own configurable block
+  size, which need not equal vLLM's KV block size.
+
+`endpoint.Get(...)` is keyed by endpoint, so the per-candidate `a_p(d)` that BLIS's
+`apForInstance(req, id)` computes is available with no upstream change. Evaluate it
+inside the candidate loop, the way `scorer/prefix/plugin.go:108-121` does.
 
 ---
 
@@ -137,8 +185,10 @@ or as separate gauges (trtllm-serve, Triton TRT-LLM). This is a definitional
 choice, not a signal-availability gap.
 
 The choice matters because BLIS is inconsistent with itself: its coefficients were
-*fitted* on the exact per-request token sum (`sim/simulator.go:1241`), but its
-policy *consumes* the block-level value —
+*fitted* on `Σ ProgressIndex` over **decoding requests only** — the calibration tap
+accumulates `kv` inside the `else if len(req.OutputTokens) > 0` branch
+(`sim/simulator.go:1238`), and `sim/step_recorder.go:56` documents it as "the summed
+resident decode context" — but its policy *consumes* the block-level value —
 `KvTokensInUse = UsedBlocks × BlockSize` (`sim/cluster/instance.go:289`,
 `sim/kv/cache.go:446`, declared at `sim/routing.go:28`). So each route is faithful
 to a different half of the simulator:
@@ -155,13 +205,25 @@ function, and the metric matches it near-exactly: vLLM's usage is
 annotated "vLLM parity"), both GPU-tier only. Use the shadow sum as the cold-start
 and cross-check path.
 
+**This is faithful to what the policy consumes, not to what `C1` was fitted on, so
+report it as an accepted approximation rather than an exact mapping.** The largest
+divergence is not prefix sharing but **prefilling requests' allocated blocks**: the
+fitted `kv` excludes them entirely, occupancy includes them. A 45k-token prefill in
+flight adds ~45,000 tokens that the fitted definition omits — `45,000 × 0.0476 =
+2,142 µs` at H100 coefficients, roughly **12% of `T_iter`**, and an order of
+magnitude larger than the prefix double-count below. That context also co-varies
+with `S_pf`, so it is charged twice: once through `C1·KV` and again through
+`C_pf·S_pf`. Since BLIS's own consumed value has the same property, this is a
+mismatch we inherit rather than introduce — which is why the metric route remains
+the right choice, and why it must still be declared.
+
 The fitted-definition argument for the shadow sum is weaker than it looks: the
 coefficients are the policy's *forecasting prior*, fit against BLIS's own
 trained-physics model rather than against real vLLM, so matching them buys fidelity
 to the simulator's physics, not to hardware.
 
 **Still measure the ratio once on the target cluster.** The known divergence is the
-shadow sum's per-resident prefix double-count. At `B_dec = 8` that is roughly +28%
+shadow sum's per-resident prefix double-count. At `BatchSize = 8` that is roughly +28%
 on `reasoning` (prefix 250 / mean input 1,000) and `interactive-chat` (1,000 /
 4,000), and roughly +4% on `deep-research` (2,000 / 45,000) — material, workload-
 dependent, and nowhere near the 100x the unit trap below guards against.
@@ -212,8 +274,9 @@ vLLM already calculates exactly this quantity. `compute_iteration_details`
 (`vllm/v1/utils.py:797`) produces `num_ctx_tokens` — the sum of scheduled tokens
 over requests in context (prefill) phase, the same definition as BLIS's
 `ResidentPrefillTokens`. It lands in `SchedulerIterationDetails`
-(`vllm/v1/metrics/stats.py:171`) alongside `num_generation_requests` (`B_dec`)
-and `elapsed_ms` (`T_iter`).
+(`vllm/v1/metrics/stats.py:171`) alongside `num_generation_requests` — the
+**decode-only** count, which is BLIS's fitted `b_dec` and *not* the `BatchSize` the
+policy consumes (§1) — and `elapsed_ms` (`T_iter`).
 
 It goes to a **log line** (`loggers.py:182`), behind
 `--enable-logging-iteration-details`. It is not a metric.
@@ -241,7 +304,8 @@ sufficient alone.
 
 1. *vLLM*: promote `num_ctx_tokens` to a Prometheus gauge. Small upstream patch;
    the value is already computed, this is serialization only. It also delivers
-   `num_generation_requests` (`B_dec`) and `elapsed_ms` (`T_iter`).
+   `num_generation_requests` (decode-only; BLIS's fitted `b_dec`, not the consumed
+   `BatchSize` — see §1) and `elapsed_ms` (`T_iter`).
 2. *Router → plugin*: declare it under the model-server extractor's
    `customMetrics` in EPP config —
    `{attributeKey: "...", metricSpec: "vllm:num_ctx_tokens"}`
@@ -254,7 +318,7 @@ sufficient alone.
 
    **No router fork is needed** — this path is config plus plugin code. But note
    the consequences: the value arrives on the *attribute* API rather than the
-   `Metrics` struct, so it uses a different accessor from `B_dec`/`KV`/`QueueDepth`;
+   `Metrics` struct, so it uses a different accessor from `BatchSize`/`KV`/`QueueDepth`;
    it is absent unless the config declares it; and the plugin must handle `ok ==
    false` explicitly rather than reading a zero.
 
@@ -272,7 +336,7 @@ The port sums each prefilling resident's *entire remaining prompt*, but `S_pf` i
 only what is scheduled *this step*. So the approximation over-estimates by roughly
 `nChunks = ceil(a_p / chunk)`.
 
-At H100 coefficients, `B_dec = 8`, `KV = 16,384`, chunk budget 2,048:
+At H100 coefficients, `BatchSize = 8`, `KV = 16,384`, chunk budget 2,048:
 
 | Workload | mean input | nChunks | true `S_pf` | approx | `T_iter(decode)` true → approx | inflation |
 |---|---:|---:|---:|---:|---|---:|
@@ -421,9 +485,35 @@ The router has the hooks needed
 | Hook | Fires | Populates |
 |---|---|---|
 | `PreRequest` | after placement, before dispatch | register resident: endpoint, arrival time, prompt length, class |
-| `ResponseHeader` | response headers received | first-token time, `TTFTSet` |
+| `ResponseBody`, first invocation | first body chunk | first-token time, `TTFTSet` — **not `ResponseHeader`**, see below |
 | `ResponseBody` | **every streaming chunk** | `StepsDone` |
 | `ResponseBody` with `EndOfStream` | completion | deregister; update the `N_out` running mean |
+
+#### First-token time comes from the body hook, not the header hook
+
+`ResponseHeader` fires when the model server *begins responding*, before any token
+exists. The router gets this right in its own handler layer
+(`handlers/response.go:55`): `if reqCtx.FirstTokenTimestamp.IsZero() &&
+len(responseBytes) > 0`.
+
+A plugin cannot apply that rule directly. The `Response` struct passed to
+requestcontrol plugins carries `RequestID`, `Headers`, `StartOfStream`,
+`EndOfStream`, `ReqMetadata`, `Usage`, and `DynamicMetadata` — **no body bytes** —
+so there is nothing to test for emptiness. Use `Response.StartOfStream`, or
+`Response.Usage.CompletionTokens` first reaching >= 1. Prefer the usage route,
+since per-chunk usage is already required for `StepsDone`.
+
+Two further interface facts:
+
+- **Non-final chunks run on a background goroutine.** `director.go:545` enqueues
+  them to a per-request queue drained by `processResponseBodyQueue`, so a
+  `time.Now()` taken inside the plugin's `ResponseBody` is the *dequeue* time, not
+  chunk arrival. Recorded TTFT feeds the TTFT conjunct of `g()` for every resident.
+  Declare the bias, or plumb the handler-layer timestamp through.
+- **The shadow table needs a mutex** — written from that goroutine, read from the
+  scheduling path.
+- **`Response.Headers` is nil during body processing.** Anything header-borne (the
+  class carrier of §5.5) must be captured at `PreRequest`.
 
 `Response.Usage.CompletionTokens` gives exact counts rather than inferred ones,
 provided usage is emitted per chunk — set `stream_options.continuous_usage_stats`
@@ -433,7 +523,7 @@ final chunk** and `StepsDone` must be inferred from chunk counts instead.
 
 Two known limits: a **replicated EPP** splits the table, so each replica sees only
 the residents it placed; and traffic bypassing the EPP is invisible. Prefer
-vLLM's `RunningRequestsSize` for `B_dec` (it counts everything) and use the shadow
+vLLM's `RunningRequestsSize` for `BatchSize` (it counts everything) and use the shadow
 table for the per-resident detail only.
 
 ### 5.5 SLO class carrier — not needed for the registered campaign
@@ -792,11 +882,11 @@ explicitly rather than treating it as "idle", whichever route is taken.
 
 | Signal | Focal | Least-TTFT | Kairos | Status |
 |---|:-:|:-:|:-:|---|
-| `B_dec` | x | x | x | Direct |
+| `BatchSize` (**not** `B_dec`) | x | x | x | Direct — running total including prefilling requests; `C0` was fitted on the decode-only count, negligibly (§1) |
 | `QueueDepth` | x | x | x | Direct |
 | Block size / capacity | x | x | x | Direct |
-| `a_p` uncached suffix | x | x | | Direct |
-| `KV` | x | x | x | Derived — prefer the metric route (matches what the policy consumes); shadow sum as cross-check (5.1) |
+| `a_p` uncached suffix | x | x | | Direct — per candidate endpoint, via `CachedBlockCount()` (§2) |
+| `KV` | x | x | x | Derived, and a **declared approximation** — prefer the metric route (matches what the policy consumes, not what `C1` was fitted on); shadow sum as cross-check (5.1) |
 | `C_pf`, `C_attn` coefficients | x | x | x | Config — `C_attn` is load-bearing, see §1 |
 | chunk budget (`--max-num-batched-tokens`) | x | x | x | Config — must match the engine |
 | Per-resident `KVBlocks` | x | x | | Derived |
@@ -846,11 +936,11 @@ assumption for this study. Where they differ, the difference is the declared dev
 
 | Signal | Route | Why it is faithful |
 |---|---|---|
-| `B_dec` | `RunningRequestsSize` ← `vllm:num_requests_running` | ≡ definitions verified identical: `len(self.running)` vs `len(RunningBatch.Requests)`, both counting prefilling requests (§1) |
+| `BatchSize` | `RunningRequestsSize` ← `vllm:num_requests_running` | ≡ definitions verified identical on the **consume** side: `len(self.running)` vs `len(RunningBatch.Requests)`, both counting prefilling requests. `C0` was fitted on the decode-only count instead, but the fit uses only pure-decode rows where the two coincide and `C0` is ~5.3-5.9 µs/req, so the gap is under 0.1% of `T_iter` (§1) |
 | Block size / capacity | `CacheBlockSize`, `CacheNumBlocks` ← `vllm:cache_config_info` | ≡ same quantities |
-| `KV` | metric route: `KVCacheUsagePercent * CacheBlockSize * CacheNumBlocks` | ≡ matches what the policy *consumes* (`UsedBlocks * BlockSize`) to within the null-block factor `N/(N-1)` (§5.1) — but see the coefficient row below |
 | `N̂_out` | EPP-internal censored per-class running mean | ≡ BLIS supplies it the same way by design; must stay censored (INV-9) |
-| Resident `ArrivalUs`, `FirstTokenUs`, `InputLen` | shadow table via requestcontrol hooks | ≡ the EPP routed the request and observes its lifecycle, so these are as exact as the simulator's |
+| Resident `ArrivalUs`, `InputLen` | shadow table via requestcontrol hooks | ≡ the EPP routed the request and observes its lifecycle, so these are as exact as the simulator's |
+| Resident `FirstTokenUs` | first `ResponseBody` invocation | **near-faithful**: the event is observed exactly, but non-final chunks run on a background queue so the plugin's timestamp is dequeue time, not chunk arrival (§5.4). Faithful means reading the handler's `FirstTokenTimestamp`, taken synchronously |
 | `SLOClass` | single-class config, `sloClasses` empty | ≡ every registered cell is single-class, exactly as the simulator ran (§5.5) |
 | `c_xfer` | measured on the target interconnect | ≡ **provided it is actually measured**; inheriting the simulated value is the unfaithful path |
 | chunk budget, block size, `max-num-seqs` | config mirroring the engine flags | ≡ same values |
@@ -874,7 +964,8 @@ trust gap, which is why it is recommended despite not being the faithful shape.
 | Scheduler rollout | accept the `rollforward` substitution, measure its cost, log loudly (§5.6 options 1+3) | position-indexed gauges with an `slo_class` label, `WaitingQueueSize` tail model, and a `scheduler_step_index` seqlock | still an approximation at bounded K; fully faithful means unbounded K, which is impractical — so "faithful within a declared bound" |
 | `collocPrefill` | omitted, declared as a DEVIATION | per-request prefill state on the *decode* node | **an interim improvement needs no upstream work**: approximate from the same shadow subset `sPfFor` already uses (residents without a first token on that endpoint) |
 | Residents this EPP did not place | shadow table + a single EPP replica | per-request state from vLLM, so the policy sees *all* residents rather than only its own | single replica makes the shadow table near-complete, which is why it is acceptable (§5.4) |
-| `a_p` uncached suffix | one value per request, from `PrefixCacheMatchInfo` | **per-candidate** `a_p(d)` — BLIS calls `apForInstance(req, id)` per instance | plugin-side only, no upstream change; the port carries one value for brevity and says so |
+| `KV` | metric route: `KVCacheUsagePercent * CacheBlockSize * CacheNumBlocks` | `Σ ProgressIndex` over **decoding requests only** — what `C1` was fitted on | matches what the policy *consumes*, not what the coefficients were fitted on. Dominant divergence is prefilling requests' allocated blocks (~12% of `T_iter` at 45k prefill), which BLIS's consumed value also includes — so the mismatch is inherited, not introduced. Declare it (§5.1) |
+| `a_p` uncached suffix | **per-candidate** `a_p(d)` via `endpoint.Get(...)` in the candidate loop | ≡ the same thing — BLIS calls `apForInstance(req, id)` per instance | recommended *is* faithful: plugin-side only, no upstream change. The port carries one value for brevity; there is no reason to keep it (§2) |
 
 #### The least faithful part of the transfer, and it is not a signal
 
@@ -885,9 +976,18 @@ trust gap, which is why it is recommended despite not being the faithful shape.
 The coefficients were fit against BLIS's own trained-physics model, not against real
 vLLM. Every latency projection in every arm rests on them, so this is the largest
 fidelity gap in the whole transfer — larger than any individual signal. It also
-resolves §5.1's fit/consume mismatch (coefficients fitted on per-request token sums
-but consumed against block-level occupancy), and the instrument is already in the
-§6.1 bundle.
+resolves §5.1's fit/consume mismatch (coefficients fitted on decoding-request
+context sums but consumed against block-level occupancy) and §1's (`C0` fitted on
+the decode-only count but consumed against the running total), and the instrument is
+already in the §6.1 bundle.
+
+**The fit reports are direct evidence.** `inputs/coeffs-*.json` records `r2` of
+`0.9999999983` (H100) and `0.9999999994` (A100), with `cond_b_dec_kv` of 2.50 and
+2.38 respectively. Real hardware does not fit a three-parameter linear model to ten
+significant figures; this is OLS recovering the linear model that generated the
+rows. Note also that `coeffs-llama70b-a100real-tp4.json` is named "a100real" and
+sources `/tmp/theta_a100real/*.csv` — the name should not be read as evidence of
+hardware measurement, since it carries the same synthetic signature as the H100 set.
 
 #### Reclassified: not needed by the focal arm at all
 

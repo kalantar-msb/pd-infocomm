@@ -31,14 +31,35 @@ No config, no computation.
 
 | BLIS signal | Route | How |
 |---|---|---|
-| `BatchSize` (`B_dec`) | `vllm:num_requests_running` | `Metrics.RunningRequestsSize` |
+| `BatchSize` | `vllm:num_requests_running` | `Metrics.RunningRequestsSize` |
 | `QueueDepth` | `vllm:num_requests_waiting` | `Metrics.WaitingQueueSize` |
 | KV block size | `vllm:cache_config_info` | `Metrics.CacheBlockSize` |
 | KV total blocks | `vllm:cache_config_info` | `Metrics.CacheNumBlocks` |
 | KV usage fraction | `vllm:kv_cache_usage_perc` | `Metrics.KVCacheUsagePercent` |
 
-`B_dec` is confirmed definitionally identical to BLIS's `BatchSize`: both count
-requests still prefilling.
+**Do not call this `B_dec`.** The symbol in the latency law
+`T_iter = alpha + C0*B_dec + C1*KV + C_pf*S_pf` is decode-only, and this value is
+not. `vllm:num_requests_running` is `len(self.running)`; BLIS's `BatchSize()` is
+`len(sim.RunningBatch.Requests)` (`simulator.go:699`). Both include requests still
+prefilling, so the **mapping is exact** — but the quantity is a running total, not
+a decode count, and we preserve BLIS's behavior deliberately.
+
+Worth knowing that BLIS is inconsistent with itself here, and we inherit it:
+
+- Its calibration tap records `b_dec` (decode-only) and `batch_size` (running
+  total) as **separate CSV columns** (`simulator.go:1224-1244`,
+  `step_recorder.go:22`), classifying `ProgressIndex < InputLen` as prefilling.
+- `fit_coeffs.py:82` fits `C0` against the **decode-only** `b_dec` column.
+  `batch_size` is recorded and never used as a regressor.
+- The policy consumes `ds.BatchSize`, the running total (`simulator.go:632`,
+  `edpp_kairos.go:329`).
+
+So `C0` is fitted on one definition and consumed against another. Two reasons this
+is not worth acting on: the fit is drawn only from rows with `s_pf == 0`, where no
+prefilling requests exist and the two definitions coincide; and `C0` is ~5.3-5.9
+µs/request, so wrongly counting four prefilling requests costs ~21 µs against a
+17,000-27,000 µs iteration — **under 0.1%**. Preserve the BLIS behavior, keep the
+name honest.
 
 > **Do not use `Metrics.KvCacheMaxTokenCapacity`.** It looks like the answer for
 > KV capacity but is never assigned anywhere in v0.9.0 — it exists only in the
@@ -52,7 +73,7 @@ requests still prefilling.
 
 | BLIS signal | How | Note |
 |---|---|---|
-| `KvTokensInUse` (`KV`) | `KVCacheUsagePercent * CacheBlockSize * CacheNumBlocks` | **No division by 100.** See the unit trap below |
+| `KvTokensInUse` (`KV`) | `KVCacheUsagePercent * CacheBlockSize * CacheNumBlocks` | **No division by 100** — unit trap below. Also a **declared approximation**, see §6 |
 | Per-resident `KVBlocks` | `ceil((InputLen + TokensStreamed) / CacheBlockSize)` | from the shadow table |
 
 > **Unit trap.** `KVCacheUsagePercent` is a **fraction in [0,1]**, despite the
@@ -64,12 +85,16 @@ requests still prefilling.
 > and mandates the `/100`; it is wrong, and the bug has already appeared in
 > generated port code once.
 
-We use the metric route for `KV` rather than summing per-resident context from the
-shadow table. The metric is block-granular, so a shared prefix block is counted
-once in total — matching what the BLIS policy consumes (`UsedBlocks * BlockSize`).
-The shadow sum counts a shared prefix once *per resident*, which runs about +28%
-high on `reasoning` and `interactive-chat`. Keep the shadow sum only as a
-cold-start path and a cross-check.
+We use the metric route rather than summing per-resident context from the shadow
+table. The metric is block-granular, so a shared prefix block is counted once in
+total — matching what the BLIS policy **consumes** (`UsedBlocks * BlockSize`). The
+shadow sum counts a shared prefix once *per resident*, running about +28% high on
+`reasoning` and `interactive-chat`. Keep the shadow sum only as a cold-start path
+and a cross-check.
+
+This matches BLIS's decision function but **not** the definition its coefficients
+were fitted against. That is an accepted approximation, not an exact mapping — see
+§6 for what diverges and by how much.
 
 ---
 
@@ -114,6 +139,14 @@ parameters:
 
 **Fail loudly on an unknown GPU type.** A silent default makes the policy
 hardware-blind, which is the exact failure mode it exists to beat.
+
+**Heterogeneity rides `alpha`, not `C1`.** At B=8 and KV=16,384, pure-decode
+`T_iter` is 17,437 µs on H100 against 26,893 µs on A100 — a 1.54x ratio that is
+almost exactly the intercept ratio (16,614 vs 25,564 = 1.539). `C1·KV` contributes
+about 500 µs of that ~9,500 µs gap. `required-signals.md` §5.3 justifies GPU typing
+with the `C1` spread (0.0476 vs 0.0782); the conclusion is right but the mechanism
+is the intercept. This *strengthens* the case for per-endpoint typing, since the
+discriminating term is present on every iteration regardless of KV state.
 
 All decode endpoints must live in **one** `InferencePool`. Two pools means two
 EPPs, each blind to the other's endpoints, and no joint argmin is possible — so
@@ -239,7 +272,7 @@ counting chunks only as a declared degradation.
 - **One EPP replica.** Replicas split the table — each sees only what it placed.
   Run a single replica for the campaign.
 - **Bypassing traffic is invisible.** Use `Metrics.RunningRequestsSize` for
-  `B_dec` (it counts everything) and the shadow table only for per-resident detail.
+  `BatchSize` (it counts everything) and the shadow table only for per-resident detail.
 
 ---
 
@@ -250,10 +283,52 @@ each gets a counter or a log line.
 
 | BLIS signal | What we do | Error direction |
 |---|---|---|
+| `KvTokensInUse` (`KV`) | block occupancy from the metric, below | over-counts vs the fitted definition when a prefill is in flight |
 | `ResidentPrefillTokens` (`S_pf`) | capped shadow sum, below | over-estimate, biases away from local prefill |
 | Scheduler rollout | closed-form `rollforward` over the shadow table | under-estimates admission delay at deep queues |
 | `collocPrefill` | omitted | under-prices contention on the decode node |
 | Prefill-pool externality | degrades toward zero | under-prices remote prefill |
+
+### `KV` — block occupancy, not decoding-request contexts
+
+The coefficient `C1` was fitted against `Σ ProgressIndex` over **decoding requests
+only** (`simulator.go:1238`, inside the `else if len(req.OutputTokens) > 0`
+branch; `step_recorder.go:56` documents it as "the summed resident decode
+context"). Block occupancy is a different quantity. Three divergences, smallest
+first:
+
+1. **Null-block factor.** vLLM computes `1 − free/(num_gpu_blocks − 1)`
+   (`block_pool.py:805-816`); BLIS divides by `TotalBlocks`. An `N/(N−1)` offset,
+   negligible for N in the thousands.
+2. **Prefix sharing.** Block-granular occupancy counts a shared prefix block once;
+   the fitted per-request sum counts it per resident. Roughly +28% on `reasoning`
+   and `interactive-chat` for the shadow route, which is why we do not use it.
+3. **Prefilling requests' allocated blocks — the dominant one.** The fitted `kv`
+   excludes them entirely; occupancy includes them. A 45k-token prefill in flight
+   adds ~45,000 tokens to occupancy that the fitted definition omits:
+   `45,000 × 0.0476 = 2,142 µs` at H100 coefficients, about **12% of `T_iter`**.
+   It also co-varies with `S_pf`, so that context is charged twice — once through
+   `C1·KV` and again through `C_pf·S_pf`.
+
+Why we accept it anyway: BLIS's own consumed value,
+`KvTokensInUse = UsedBlocks × BlockSize`, is *also* block-level and *also* includes
+prefilling requests' blocks. So the metric route reproduces BLIS's decision
+function faithfully, and the fit/consume mismatch is one we **inherit rather than
+introduce**. For a transfer study that is the right choice — the decision function
+is what transfers. But it is an approximation and must be reported as one.
+
+Divergence 3 is worth measuring once on the target cluster: drive a known batch
+with a long prefill in flight and compare `Σ` decoding-resident context against the
+occupancy estimate.
+
+> **The port currently does the opposite of this decision.** `kvTokensFor`
+> (`causal_slo_externality.go:325`) prefers the shadow sum and guards its metric
+> fallback on `m.KvCacheMaxTokenCapacity > 0` — the field that is never assigned,
+> so the fallback is unreachable and `KV` reads **0** whenever the shadow table is
+> empty. Its comment also claims the metric counts prefix blocks retained for
+> finished requests; it does not — `free_blocks()` returns those to the free queue
+> with hashes intact (`block_pool.py:719-740`), so `get_usage` excludes them.
+> Tracked in §9.
 
 ### `S_pf` — cap it
 
@@ -334,6 +409,14 @@ trained-physics model, not against real vLLM hardware. Every latency projection 
 every arm rests on them, so this is a bigger fidelity gap than any individual
 signal in this document.
 
+The fit reports confirm it. `inputs/coeffs-*.json` carries `r2` of
+`0.9999999983` (H100) and `0.9999999994` (A100), with `cond_b_dec_kv` of 2.50 and
+2.38. Real hardware does not fit a three-parameter linear model to ten significant
+figures — this is OLS recovering the linear model that generated the rows. Note
+`coeffs-llama70b-a100real-tp4.json` is named "a100real" and sources
+`/tmp/theta_a100real/*.csv`, but carries the same synthetic signature; the name
+should not be read as evidence of hardware measurement.
+
 The instrument for fixing it already exists:
 `--enable-logging-iteration-details` emits `(num_ctx_tokens,
 num_generation_requests, elapsed_ms)` per iteration — a real-hardware analogue of
@@ -352,6 +435,7 @@ before drawing conclusions about the predictor.
 | `QueueDepth` and the skipped-waiting queue | vLLM tracks `waiting` **and** `num_skipped_waiting_reqs`; BLIS has one `WaitQ`. If `num_requests_waiting` excludes the skipped queue, `QueueDepth` under-counts requests genuinely ahead of an arrival. Decide once (probably the sum) and declare it |
 | `c_xfer` | must be measured on the target interconnect. Inheriting the simulated value is the unfaithful path and is easy to do by accident |
 | Joint `(d, p)` placement registration | a disaggregated placement should arguably register the resident on **both** endpoints. If prefill endpoints are never registered, their `S_pf` reads 0, `tIterPrefill` collapses to `alpha_p`, and prefill-pool contention is under-priced by ~1.8x |
+| `kvTokensFor` contradicts §2 | the port prefers the shadow sum and its metric fallback is dead code (guarded on the never-assigned `KvCacheMaxTokenCapacity`), so `KV` reads 0 on an empty table. Needs the guard replaced with `CacheBlockSize * CacheNumBlocks`, the preference order settled to match §2, and its prefix-retention comment corrected. **Code change, not a doc change** |
 
 ---
 
@@ -368,5 +452,6 @@ before drawing conclusions about the predictor.
 - [ ] `S_pf` capped per resident and in total
 - [ ] `a_p` per candidate endpoint, via `CachedBlockCount()`
 - [ ] No `/100` on `KVCacheUsagePercent`
+- [ ] `KV` read from the metric route, not the shadow sum — `kvTokensFor` currently inverts this and its fallback is dead (§9)
 - [ ] Rollout-unavailable log or counter firing
 - [ ] Unknown GPU type rejected, not defaulted
